@@ -1,44 +1,9 @@
-# Compiled Java class files
-*.class
-
-# Log files
-*.log
-
-# Maven build directory
-target/
-
-# IntelliJ IDEA project files
+.gradle
+build
 .idea/
-*.iml
-
-# Eclipse project files
 .project
-.classpath
 .settings/
-
-# VS Code settings
-.vscode/
-
-# OS-specific files
-.DS_Store           # macOS
-Thumbs.db           # Windows
-desktop.ini         # Windows
-
-# Temporary files
-*.tmp
-*.bak
-*.swp
-*.swo
-
-# Translation database backups (if any)
-*.csv~
-*.json~
-
-# Other backup files
-*.orig
-
-# Plugin JAR files (if you generate them locally)
-*.jar
-
-# Git metadata backups
-*.lock
+.classpath
+nbactions.xml
+nb-configuration.xml
+nbproject/
