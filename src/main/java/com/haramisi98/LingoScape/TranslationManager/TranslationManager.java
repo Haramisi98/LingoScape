@@ -1,7 +1,9 @@
 package com.haramisi98.LingoScape.TranslationManager;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -56,47 +58,59 @@ public class TranslationManager {
         return translations;
     }
 
-    public String translate(TranslationType type, String text) {
-        // Regex to identify parts to translate or preserve, including spaces
-        Pattern pattern = Pattern.compile("(<[^>]+>|\\([^\\)]+\\)|\\d+|\\b[\\w\\s]+\\b)");
+    public String generalTranslate(TranslationType type, String text) {
+        // Return the translated text if it exists; otherwise, return the original text
+        return getMapByType(type).getOrDefault(text, text);
+    }
+
+    public String translateItemText(TranslationType type, String text) {
+        // Regex to extract <col=xxx>, the main text part, and optional "(Members)"
+        Pattern pattern = Pattern.compile("(<col=[^>]+>)(.*?)(\\s\\(Members\\))?(</col>)?", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(text);
 
-        return buildTranslatedText(matcher, type);
-    }
+        if (matcher.matches()) {
+            String colorTag = matcher.group(1);
+            String mainText = matcher.group(2);
+            String suffix = matcher.group(3);
 
-    private String buildTranslatedText(Matcher matcher, TranslationType type) {
-        StringBuilder translatedText = new StringBuilder();
+            // Replace numbers with placeholders and store them in order
+            List<String> numbers = new ArrayList<>();
+            Pattern numberPattern = Pattern.compile("\\d+");
+            Matcher numberMatcher = numberPattern.matcher(mainText);
 
-        while (matcher.find()) {
-            String match = matcher.group().trim();
-            if (match.isEmpty()) {
-                continue; // Skip empty matches to avoid unnecessary spaces
+            StringBuffer processedTextBuffer = new StringBuffer();
+            int placeholderIndex = 0;
+            while (numberMatcher.find()) {
+                numbers.add(numberMatcher.group()); // Store the original number
+                numberMatcher.appendReplacement(processedTextBuffer, "{" + (placeholderIndex++) + "}");
             }
+            numberMatcher.appendTail(processedTextBuffer);
+            String processedText = processedTextBuffer.toString();
 
-            if (isTranslatable(match)) {
-                translateAndAppend(match, translatedText, type);
-            } else {
-                translatedText.append(match); // Append tags and numbers unchanged
+            // Translate the processed text
+            String translated = generalTranslate(type, processedText);
+
+            // Replace placeholders back with original numbers
+            Pattern placeholderPattern = Pattern.compile("\\{(\\d+)}");
+            Matcher placeholderMatcher = placeholderPattern.matcher(translated);
+
+            StringBuffer translatedWithNumbersBuffer = new StringBuffer();
+            while (placeholderMatcher.find()) {
+                int index = Integer.parseInt(placeholderMatcher.group(1));
+                placeholderMatcher.appendReplacement(translatedWithNumbersBuffer, numbers.get(index));
             }
-            translatedText.append(" "); // Maintain spaces after each segment
+            placeholderMatcher.appendTail(translatedWithNumbersBuffer);
+            String translatedWithNumbers = translatedWithNumbersBuffer.toString();
+
+            // Reconstruct the final translated text
+            return colorTag + translatedWithNumbers + (suffix != null ? suffix : "") + "</col>";
         }
 
-        return translatedText.toString().trim(); // Return the cleaned-up translated string
+        // If the text doesn't match the expected format, return as is
+        return text;
     }
 
-    private boolean isTranslatable(String text) {
-        return !text.startsWith("<") && !text.startsWith("(") && !text.matches("\\d+");
-    }
 
-    private void translateAndAppend(String text, StringBuilder translatedText, TranslationType type) {
-        Map<String, String> translationMap = getMapByType(type);
-        if (translationMap.containsKey(text)) {
-            translatedText.append(translationMap.get(text));
-        } else {
-            // Handle untranslatable text or partial translations
-            translatedText.append(text);
-        }
-    }
 
     private Map<String, String> getMapByType(TranslationType type) {
         switch (type) {
