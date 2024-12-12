@@ -6,10 +6,7 @@ import net.runelite.api.Actor;
 import net.runelite.api.Client;
 import net.runelite.api.MenuAction;
 import net.runelite.api.MenuEntry;
-import net.runelite.api.events.GameTick;
-import net.runelite.api.events.InteractingChanged;
-import net.runelite.api.events.MenuEntryAdded;
-import net.runelite.api.events.MenuOpened;
+import net.runelite.api.events.*;
 import net.runelite.api.widgets.ComponentID;
 import net.runelite.api.widgets.Widget;
 import net.runelite.client.plugins.Plugin;
@@ -18,6 +15,9 @@ import net.runelite.client.eventbus.Subscribe;
 
 import javax.inject.Inject;
 import java.util.Arrays;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 @PluginDescriptor(
         name = "LingoScape",
@@ -31,17 +31,15 @@ public class TranslationPlugin extends Plugin {
     @Inject
     private Client client;
 
-    private Actor actor;
-
     @Override
     protected void startUp() throws Exception {
-        // Assume the default language is English ("en")
+        // TODO Assume the default language is English ("en")
         translationManager = new TranslationManager("dk");
     }
 
     @Override
     protected void shutDown() throws Exception {
-        // Cleanup if necessary, currently no resources to clean up
+        // TODO Cleanup if necessary, currently no resources to clean up
     }
 
     // THIS TRANSLATES, NPC MENU OPTIONS BUT NOT NPC NAMES
@@ -51,7 +49,7 @@ public class TranslationPlugin extends Plugin {
     {
         try {
             String eng = event.getMenuEntry().getOption();
-            String translatedText = translationManager.generalTranslate(TranslationType.MENU , eng);
+            String translatedText = translationManager.translateTextType(TranslationType.MENU , eng);
 
             event.getMenuEntry().setOption(event.getOption().replace(eng, translatedText));
 
@@ -59,63 +57,62 @@ public class TranslationPlugin extends Plugin {
         }
     }
 
-    // NPC Names, Item names, NPC DIALOGE! SKILLING MENU, Initial out lay!
-
+    // NPC Names, Item names
     @Subscribe
     public void onMenuOpened(MenuOpened event)
     {
-        MenuEntry[] menuEntries = client.getMenuEntries();
+        MenuEntry[] menuEntries = event.getMenuEntries();
         MenuEntry[] newMenuEntries = Arrays.copyOf(menuEntries, menuEntries.length);
 
         for (int idx = 1; idx < newMenuEntries.length; idx++) {
             MenuEntry entry = newMenuEntries[idx];
 
-            // item, items are expected to have <col> tag with them.
+            // Item
+            // Items are expected to have <col> tag with them.
             if (entry.getItemId() > 0) {
-                String translatedText = translationManager.translateItemText(TranslationType.ITEM, entry.getTarget());
+                String translatedText = translationManager.getTranslationFromUnfilteredText(TranslationType.ITEM, entry.getTarget());
                 entry.setTarget(translatedText);
                 continue;
             }
 
             // equipped item
-            // Widget has some translateable text! right click options.
+            // TODO Widget has some translateable text! right click options.
             if (entry.getWidget() != null && entry.getWidget().getId() <= 25362457 && entry.getWidget().getId() >= 25362447) {
-                String translatedText = translationManager.translateItemText(TranslationType.ITEM, entry.getTarget());
+                String translatedText = translationManager.getTranslationFromUnfilteredText(TranslationType.ITEM, entry.getTarget());
                 entry.setTarget(translatedText);
                 continue;
             }
 
-            //ground items
+            // ground items
             if (entry.getType() == MenuAction.EXAMINE_ITEM_GROUND | entry.getType() == MenuAction.GROUND_ITEM_THIRD_OPTION | entry.getType() == MenuAction.GROUND_ITEM_FOURTH_OPTION | entry.getType() == MenuAction.GROUND_ITEM_FIFTH_OPTION) {
-                String translatedText = translationManager.translateItemText(TranslationType.ITEM, entry.getTarget());
+                String translatedText = translationManager.getTranslationFromUnfilteredText(TranslationType.ITEM, entry.getTarget());
                 entry.setTarget(translatedText);
                 continue;
             }
 
-            //player, I guess nothing here yet!
+            // player, I guess nothing here yet!
             if (entry.getPlayer() != null) {
                 continue;
             }
 
-            //npc
+            // npc names
+            // TODO Not all npc names are this color, General solution is needed for the Col tag.
             if (entry.getNpc() != null) {
                 String prefix = "<col=ffff00>";
-                String translatedText = translationManager.translateItemText(TranslationType.NPC, entry.getTarget().toUpperCase());
-                if (!translatedText.startsWith(prefix)) {
-                    translatedText = prefix + translatedText;
-                }
-                if (translatedText == entry.getNpc().getName().toUpperCase())
+                String translatedText = translationManager.getTranslationFromUnfilteredText(TranslationType.NPC, entry.getTarget().toUpperCase());
+                if (translatedText.contains(entry.getTarget().toUpperCase()))
                 {
                     continue;
                 }
-                entry.setTarget(translatedText);
+                entry.setTarget(prefix + translatedText);
                 continue;
             }
 
-            //object
+            // object
+            // Although I cant name any instance where there is a different color, it would be wise to use a generalized solution here.
             if (entry.getIdentifier() > 0 & entry.getType() != MenuAction.CC_OP & entry.getType() != MenuAction.RUNELITE & entry.getType() != MenuAction.WALK && entry.getType() != MenuAction.CC_OP_LOW_PRIORITY) {
                 String prefix = "<col=00ffff>";
-                String translatedText = translationManager.translateItemText(TranslationType.OBJECT, entry.getTarget().toUpperCase());
+                String translatedText = translationManager.getTranslationFromUnfilteredText(TranslationType.OBJECT, entry.getTarget().toUpperCase());
                 if (!translatedText.startsWith(prefix)) {
                     translatedText = prefix + translatedText;
                 }
@@ -128,29 +125,34 @@ public class TranslationPlugin extends Plugin {
             }
         }
 
-        // THIS Is the part that overWrites the gameClient!
-        client.setMenuEntries(newMenuEntries);
+        // THIS Is the part that sets the translated text!
+        event.setMenuEntries(newMenuEntries);
     }
+
+    private final ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+
+    // This is needed since Events are called before the actual render happens.
+    // This means that without the wait, we won`t be able to request the rendered text since they are not there.
+    private void translateAfterRender()
+    {
+        scheduler.schedule(this::checkWidgetDialogsAndOptions, 5, TimeUnit.MILLISECONDS);
+    }
+
+    private void checkWidgetDialogsAndOptions()
+    {
+        checkWidgetDialogs();
+        checkWidgetOptionDialogs();
+    }
+
 
     @Subscribe
-    public void onInteractingChanged(InteractingChanged event)
+    public void onWidgetLoaded(WidgetLoaded event)
     {
-        if (event.getTarget() == null || event.getSource() != client.getLocalPlayer()) {
-            return;
-        }
-        actor = event.getTarget();
+        translateAfterRender();
     }
 
-    @Subscribe
-    public void onGameTick(GameTick event)
-    {
-        if (actor != null)
-        {
-            checkWidgetDialogs();
-            checkWidgetOptionDialogs();
-        }
-    }
 
+    // For translating Option elements
     private void checkWidgetOptionDialogs()
     {
         Widget playerOptionsWidget = client.getWidget(ComponentID.DIALOG_OPTION_OPTIONS);
@@ -159,12 +161,13 @@ public class TranslationPlugin extends Plugin {
             for (Widget i : optionWidgets) {
                 String optionText = i.getText() != null ? i.getText().replace("<br>", " ") : null;
                 if (optionText != null) {
-                    i.setText(translationManager.generalTranslate(TranslationType.DIALOGUE, optionText));
+                    i.setText(translationManager.translateTextType(TranslationType.DIALOGUE, optionText));
                 }
             }
         }
     }
 
+    // For translating dialogs, both player, and NPC REFACTOR into separate methods!
     private void checkWidgetDialogs()
     {
         Widget npcTextWidget = client.getWidget(ComponentID.DIALOG_NPC_TEXT);
@@ -175,13 +178,12 @@ public class TranslationPlugin extends Plugin {
         String playerdialogue = playerDialogText != null ? playerDialogText.replace("<br>", " ") : null;
 
         if (npcdialogue!= null) {
-            npcTextWidget.setText(translationManager.generalTranslate(TranslationType.DIALOGUE, npcdialogue));
+            npcTextWidget.setText(translationManager.translateTextType(TranslationType.DIALOGUE, npcdialogue));
         }
         if (playerdialogue!= null) {
-            playerTextWidget.setText(translationManager.generalTranslate(TranslationType.DIALOGUE, playerdialogue));
+            playerTextWidget.setText(translationManager.translateTextType(TranslationType.DIALOGUE, playerdialogue));
         }
     }
-
 
     // Additional methods to change language during runtime
     public void changeLanguage(String languageCode) {

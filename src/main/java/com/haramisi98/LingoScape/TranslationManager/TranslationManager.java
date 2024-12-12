@@ -58,12 +58,12 @@ public class TranslationManager {
         return translations;
     }
 
-    public String generalTranslate(TranslationType type, String text) {
+    public String translateTextType(TranslationType type, String text) {
         // Return the translated text if it exists; otherwise, return the original text
         return getMapByType(type).getOrDefault(text, text);
     }
 
-    public String translateItemText(TranslationType type, String text) {
+    public String getTranslationFromUnfilteredText(TranslationType type, String text) {
         // Regex to extract <col=xxx>, the main text part, and optional "(Members)"
         Pattern pattern = Pattern.compile("(<col=[^>]+>)(.*?)(\\s\\(Members\\))?(</col>)?", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(text);
@@ -88,7 +88,7 @@ public class TranslationManager {
             String processedText = processedTextBuffer.toString();
 
             // Translate the processed text
-            String translated = generalTranslate(type, processedText);
+            String translated = translateTextType(type, processedText);
 
             // Replace placeholders back with original numbers
             Pattern placeholderPattern = Pattern.compile("\\{(\\d+)}");
