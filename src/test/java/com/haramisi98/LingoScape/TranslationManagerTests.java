@@ -2,6 +2,9 @@ package com.haramisi98.LingoScape;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.Mockito;
 
 import java.util.HashMap;
@@ -27,6 +30,69 @@ public class TranslationManagerTests {
         spyManager.setLanguage("fr");
 
         verify(spyManager).loadTranslations("fr");
+    }
+
+    @ParameterizedTest
+    @NullAndEmptySource
+    @ValueSource(strings = {" ", "\t\n", "translationMissing", " translationMissing "})
+    void unavailableTranslationsPreserveEnglish(String value) {
+        for (TranslationType type : TranslationType.values()) {
+            Map<String, String> entries = new HashMap<>();
+            entries.put("English text", value);
+            translationManager.translations.put(type, entries);
+            assertEquals("English text", translationManager.translateTextType(type, "English text"));
+            assertEquals("Missing key", translationManager.translateTextType(type, "Missing key"));
+        }
+    }
+
+    @ParameterizedTest
+    @NullAndEmptySource
+    @ValueSource(strings = {" ", "translationMissing"})
+    void unavailableTranslationsPreserveFormattedTargets(String value) {
+        for (TranslationType type : new TranslationType[] {TranslationType.ITEM, TranslationType.NPC, TranslationType.OBJECT}) {
+            Map<String, String> entries = new HashMap<>();
+            String key = type == TranslationType.ITEM ? "Guard {0}" : "GUARD {0}";
+            entries.put(key, value);
+            translationManager.translations.put(type, entries);
+            String original = "<col=ffff00>Guard 123 (Members)</col>";
+            assertEquals(original, translationManager.getTranslationFromUnfilteredText(type, original));
+            entries.clear();
+            assertEquals(original, translationManager.getTranslationFromUnfilteredText(type, original));
+        }
+    }
+
+    @Test
+    void generatedDanishDictionaryContainsOnlyMigratedTranslations() {
+        TranslationManager manager = new TranslationManager("dk");
+        Map<String, String> menu = manager.translations.get(TranslationType.MENU);
+        assertEquals(21, menu.size());
+        assertFalse(menu.containsValue("translationMissing"));
+        assertEquals("Light", manager.translateTextType(TranslationType.MENU, "Light"));
+        assertEquals("Gå herhen", manager.translateTextType(TranslationType.MENU, "Walk here"));
+    }
+
+    @Test
+    void jsonDictionaryPreservesUnicodeNewlinesQuotesAndDelimiters() {
+        Map<String, String> values = translationManager.loadTranslationFile("/translation-fixture.json");
+        assertEquals("Hej\n\"ven\" ~|~ æøå", values.get("Hello\n\"friend\" ~|~"));
+    }
+
+    @Test
+    void absentLanguageFallsBackToEnglishWithoutRetainingDanish() {
+        TranslationManager manager = new TranslationManager("dk");
+        manager.setLanguage("zz");
+        assertEquals("Use", manager.translateTextType(TranslationType.MENU, "Use"));
+    }
+
+    @Test
+    void switchingToEnglishClearsDanishDictionary() {
+        TranslationManager manager = new TranslationManager("dk");
+        assertEquals("Brug", manager.translateTextType(TranslationType.MENU, "Use"));
+        manager.setLanguage("en");
+        assertEquals("Use", manager.translateTextType(TranslationType.MENU, "Use"));
+        assertTrue(manager.translations.isEmpty());
+        manager.setLanguage("dk");
+        assertEquals("Brug", manager.translateTextType(TranslationType.MENU, "Use"));
     }
 
     @Test

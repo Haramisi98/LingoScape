@@ -1,0 +1,149 @@
+[
+  {
+    "id": "menu.walk_here",
+    "category": "menu",
+    "english": "Walk here",
+    "translation": "Gå herhen",
+    "status": "draft"
+  },
+  {
+    "id": "menu.follow",
+    "category": "menu",
+    "english": "Follow",
+    "translation": "Følg",
+    "status": "draft"
+  },
+  {
+    "id": "menu.trade_with",
+    "category": "menu",
+    "english": "Trade with",
+    "translation": "Handl med",
+    "status": "draft"
+  },
+  {
+    "id": "menu.examine",
+    "category": "menu",
+    "english": "Examine",
+    "translation": "Undersøg",
+    "status": "draft"
+  },
+  {
+    "id": "menu.attack",
+    "category": "menu",
+    "english": "Attack",
+    "translation": "Angrib",
+    "status": "draft"
+  },
+  {
+    "id": "menu.take",
+    "category": "menu",
+    "english": "Take",
+    "translation": "Tag",
+    "status": "draft"
+  },
+  {
+    "id": "menu.talk_to",
+    "category": "menu",
+    "english": "Talk-to",
+    "translation": "Tal med",
+    "status": "draft"
+  },
+  {
+    "id": "menu.wield",
+    "category": "menu",
+    "english": "Wield",
+    "translation": "Udrust",
+    "status": "draft"
+  },
+  {
+    "id": "menu.cancel",
+    "category": "menu",
+    "english": "Cancel",
+    "translation": "Annuller",
+    "status": "draft"
+  },
+  {
+    "id": "menu.bank",
+    "category": "menu",
+    "english": "Bank",
+    "translation": "Bank",
+    "status": "draft"
+  },
+  {
+    "id": "menu.use",
+    "category": "menu",
+    "english": "Use",
+    "translation": "Brug",
+    "status": "draft"
+  },
+  {
+    "id": "menu.drop",
+    "category": "menu",
+    "english": "Drop",
+    "translation": "Smid",
+    "status": "draft"
+  },
+  {
+    "id": "menu.remove",
+    "category": "menu",
+    "english": "Remove",
+    "translation": "Fjern",
+    "status": "draft"
+  },
+  {
+    "id": "menu.eat",
+    "category": "menu",
+    "english": "Eat",
+    "translation": "Spis",
+    "status": "draft"
+  },
+  {
+    "id": "menu.wear",
+    "category": "menu",
+    "english": "Wear",
+    "translation": "Tag på",
+    "status": "draft"
+  },
+  {
+    "id": "menu.chop_down",
+    "category": "menu",
+    "english": "Chop down",
+    "translation": "Fæld",
+    "status": "draft"
+  },
+  {
+    "id": "menu.search",
+    "category": "menu",
+    "english": "Search",
+    "translation": "Søg",
+    "status": "draft"
+  },
+  {
+    "id": "menu.climb_up",
+    "category": "menu",
+    "english": "Climb-up",
+    "translation": "Klatr op",
+    "status": "draft"
+  },
+  {
+    "id": "menu.climb_down",
+    "category": "menu",
+    "english": "Climb-down",
+    "translation": "Klatr ned",
+    "status": "draft"
+  },
+  {
+    "id": "menu.close",
+    "category": "menu",
+    "english": "Close",
+    "translation": "Luk",
+    "status": "draft"
+  },
+  {
+    "id": "menu.open",
+    "category": "menu",
+    "english": "Open",
+    "translation": "Åbn",
+    "status": "draft"
+  }
+]
