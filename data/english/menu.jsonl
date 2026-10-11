@@ -1,0 +1,1718 @@
+{"sources": ["cache-items"], "text": "A Dark Disposition"}
+{"sources": ["cache-objects"], "text": "AIP"}
+{"sources": ["cache-objects"], "text": "AIQ"}
+{"sources": ["cache-objects"], "text": "AIR"}
+{"sources": ["cache-objects"], "text": "AIS"}
+{"sources": ["cache-objects"], "text": "AJP"}
+{"sources": ["cache-objects"], "text": "AJQ"}
+{"sources": ["cache-objects"], "text": "AJR"}
+{"sources": ["cache-objects"], "text": "AJS"}
+{"sources": ["cache-objects"], "text": "AKP"}
+{"sources": ["cache-objects"], "text": "AKQ"}
+{"sources": ["cache-objects"], "text": "AKR"}
+{"sources": ["cache-objects"], "text": "AKS"}
+{"sources": ["cache-objects"], "text": "ALP"}
+{"sources": ["cache-objects"], "text": "ALQ"}
+{"sources": ["cache-objects"], "text": "ALR"}
+{"sources": ["cache-objects"], "text": "ALS"}
+{"sources": ["cache-objects"], "text": "Absorb"}
+{"sources": ["cache-items", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Activate"}
+{"sources": ["cache-items"], "text": "Activity"}
+{"sources": ["cache-objects"], "text": "Add finds"}
+{"sources": ["local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Add friend"}
+{"sources": ["local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Add ignore"}
+{"sources": ["cache-objects"], "text": "Add to"}
+{"sources": ["cache-objects"], "text": "Add-House"}
+{"sources": ["cache-objects"], "text": "Add-bottom"}
+{"sources": ["cache-items"], "text": "Add-ingreds"}
+{"sources": ["cache-objects"], "text": "Add-mulch"}
+{"sources": ["cache-objects"], "text": "Adjust"}
+{"sources": ["cache-objects"], "text": "Admire"}
+{"sources": ["cache-npcs"], "text": "Adopt"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Age"}
+{"sources": ["cache-items"], "text": "Air Altar"}
+{"sources": ["cache-items", "cache-objects"], "text": "Al Kharid"}
+{"sources": ["cache-items"], "text": "Alchemy"}
+{"sources": ["cache-items"], "text": "Aldarin"}
+{"sources": ["cache-objects"], "text": "Align"}
+{"sources": ["cache-objects"], "text": "Align-net"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Ammo"}
+{"sources": ["cache-items", "cache-objects"], "text": "Ancient"}
+{"sources": ["cache-objects"], "text": "Ancient spellbook"}
+{"sources": ["cache-objects"], "text": "Ancients"}
+{"sources": ["cache-objects"], "text": "Animate"}
+{"sources": ["cache-items"], "text": "Apply"}
+{"sources": ["cache-items", "cache-objects"], "text": "Arceuus"}
+{"sources": ["cache-objects"], "text": "Arceuus spellbook"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Ardougne"}
+{"sources": ["cache-items"], "text": "Area of effect"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Armour"}
+{"sources": ["cache-objects"], "text": "Ascend"}
+{"sources": ["cache-items"], "text": "Asgarnia"}
+{"sources": ["cache-items", "cache-objects"], "text": "Assemble"}
+{"sources": ["cache-items"], "text": "Assessment"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Assignment"}
+{"sources": ["cache-items", "cache-objects"], "text": "Attach"}
+{"sources": ["cache-objects"], "text": "Attach-rope"}
+{"sources": ["cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Attack"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Attract"}
+{"sources": ["cache-items"], "text": "Attune"}
+{"sources": ["cache-items"], "text": "Auto-afk"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Awaken"}
+{"sources": ["cache-objects"], "text": "BIP"}
+{"sources": ["cache-objects"], "text": "BIQ"}
+{"sources": ["cache-objects"], "text": "BIR"}
+{"sources": ["cache-objects"], "text": "BIS"}
+{"sources": ["cache-objects"], "text": "BJP"}
+{"sources": ["cache-objects"], "text": "BJQ"}
+{"sources": ["cache-objects"], "text": "BJR"}
+{"sources": ["cache-objects"], "text": "BJS"}
+{"sources": ["cache-objects"], "text": "BKP"}
+{"sources": ["cache-objects"], "text": "BKQ"}
+{"sources": ["cache-objects"], "text": "BKR"}
+{"sources": ["cache-objects"], "text": "BKS"}
+{"sources": ["cache-objects"], "text": "BLP"}
+{"sources": ["cache-objects"], "text": "BLQ"}
+{"sources": ["cache-objects"], "text": "BLR"}
+{"sources": ["cache-objects"], "text": "BLS"}
+{"sources": ["cache-objects"], "text": "Background-music"}
+{"sources": ["cache-items"], "text": "Bail-with"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Bait"}
+{"sources": ["cache-objects"], "text": "Balance"}
+{"sources": ["cache-objects"], "text": "Balance-across"}
+{"sources": ["cache-items"], "text": "Bandit Camp"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Banish"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Bank"}
+{"sources": ["cache-items"], "text": "Bank-all"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Bank-cargo"}
+{"sources": ["cache-items", "cache-objects"], "text": "Barbarian Outpost"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Bars"}
+{"sources": ["cache-objects"], "text": "Bask"}
+{"sources": ["cache-objects"], "text": "Battlefield of Khazard"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Begin"}
+{"sources": ["cache-objects"], "text": "Bend"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Big Net"}
+{"sources": ["cache-npcs"], "text": "Big net"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Big-push"}
+{"sources": ["cache-objects"], "text": "Big-search"}
+{"sources": ["cache-objects"], "text": "Bind"}
+{"sources": ["cache-items"], "text": "Black Chinchompas"}
+{"sources": ["cache-items"], "text": "Black chinchompas"}
+{"sources": ["cache-items"], "text": "Blackout"}
+{"sources": ["cache-objects"], "text": "Bless"}
+{"sources": ["cache-objects"], "text": "Block"}
+{"sources": ["cache-items"], "text": "Bloom"}
+{"sources": ["cache-items"], "text": "Blow"}
+{"sources": ["cache-items"], "text": "Blow-on"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Board"}
+{"sources": ["cache-objects"], "text": "Board-friend"}
+{"sources": ["cache-objects"], "text": "Board-previous"}
+{"sources": ["cache-items"], "text": "Boat"}
+{"sources": ["cache-items"], "text": "Boss Log"}
+{"sources": ["cache-items"], "text": "Bottle-boat"}
+{"sources": ["cache-objects"], "text": "Bottom-Floor"}
+{"sources": ["cache-objects"], "text": "Bottom-floor"}
+{"sources": ["cache-items"], "text": "Bow"}
+{"sources": ["cache-items"], "text": "Branda and Eldric"}
+{"sources": ["cache-items"], "text": "Breach Check"}
+{"sources": ["cache-items"], "text": "Breaches"}
+{"sources": ["cache-items", "cache-objects"], "text": "Break"}
+{"sources": ["cache-objects"], "text": "Break-crystals"}
+{"sources": ["cache-items"], "text": "Break-down"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Bribe"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Brimhaven"}
+{"sources": ["cache-items"], "text": "Bryophyta"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Build"}
+{"sources": ["cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Build mode"}
+{"sources": ["cache-objects"], "text": "Build on"}
+{"sources": ["cache-objects"], "text": "Build-barricade"}
+{"sources": ["cache-objects"], "text": "Build-in"}
+{"sources": ["cache-objects"], "text": "Build-trap"}
+{"sources": ["cache-items"], "text": "Burgh Teleport"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Burn"}
+{"sources": ["cache-objects"], "text": "Burn-down"}
+{"sources": ["cache-objects"], "text": "Burn`"}
+{"sources": ["cache-objects"], "text": "Burst"}
+{"sources": ["cache-items", "cache-objects"], "text": "Burthorpe"}
+{"sources": ["cache-items"], "text": "Bury"}
+{"sources": ["cache-items"], "text": "Butterfly-jar"}
+{"sources": ["cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Buy"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Buy-boat"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Buy-crystals"}
+{"sources": ["cache-objects"], "text": "Buy-food"}
+{"sources": ["cache-objects"], "text": "Buy-items"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Buy-pass"}
+{"sources": ["cache-npcs", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Buy-plank"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Buy-sphere"}
+{"sources": ["cache-objects"], "text": "CIP"}
+{"sources": ["cache-objects"], "text": "CIQ"}
+{"sources": ["cache-objects"], "text": "CIR"}
+{"sources": ["cache-objects"], "text": "CIS"}
+{"sources": ["cache-objects"], "text": "CJP"}
+{"sources": ["cache-objects"], "text": "CJQ"}
+{"sources": ["cache-objects"], "text": "CJR"}
+{"sources": ["cache-objects"], "text": "CJS"}
+{"sources": ["cache-objects"], "text": "CKP"}
+{"sources": ["cache-objects"], "text": "CKQ"}
+{"sources": ["cache-objects"], "text": "CKR"}
+{"sources": ["cache-objects"], "text": "CKS"}
+{"sources": ["cache-objects"], "text": "CLP"}
+{"sources": ["cache-objects"], "text": "CLQ"}
+{"sources": ["cache-objects"], "text": "CLR"}
+{"sources": ["cache-objects"], "text": "CLS"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Cage"}
+{"sources": ["cache-objects"], "text": "Call"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Call-Over"}
+{"sources": ["cache-items", "cache-objects"], "text": "Camelot"}
+{"sources": ["local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Cancel"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Cancel-task"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Canyon-count (east)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Canyon-count (west)"}
+{"sources": ["cache-objects"], "text": "Capture"}
+{"sources": ["cache-items"], "text": "Carnivorous Chinchompas"}
+{"sources": ["cache-items", "cache-objects"], "text": "Carve"}
+{"sources": ["cache-objects"], "text": "Carve-pumpkin"}
+{"sources": ["cache-items", "cache-npcs", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Cast"}
+{"sources": ["cache-items"], "text": "Cast Bloom"}
+{"sources": ["cache-items"], "text": "Cast Spell"}
+{"sources": ["cache-items"], "text": "Castle Drakan"}
+{"sources": ["cache-items", "cache-objects"], "text": "Castle Wars"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Catch"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Cellar"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Challenge"}
+{"sources": ["cache-objects"], "text": "Challenge-mode"}
+{"sources": ["cache-npcs"], "text": "Challenges"}
+{"sources": ["cache-items", "cache-objects"], "text": "Champions' Guild"}
+{"sources": ["cache-items", "cache-objects"], "text": "Change"}
+{"sources": ["cache-items"], "text": "Change Prayerbook"}
+{"sources": ["cache-items"], "text": "Change Spellbook"}
+{"sources": ["cache-items"], "text": "Change-Style"}
+{"sources": ["cache-objects"], "text": "Change-clothes"}
+{"sources": ["cache-items"], "text": "Change-colour"}
+{"sources": ["cache-items"], "text": "Change-style"}
+{"sources": ["cache-items", "cache-objects"], "text": "Channel"}
+{"sources": ["cache-objects"], "text": "Channel (Asgarnia)"}
+{"sources": ["cache-objects"], "text": "Channel (Fremennik)"}
+{"sources": ["cache-objects"], "text": "Channel (Great Kourend)"}
+{"sources": ["cache-objects"], "text": "Channel (Kandarin)"}
+{"sources": ["cache-objects"], "text": "Channel (Karamja)"}
+{"sources": ["cache-objects"], "text": "Channel (Kharidian Desert)"}
+{"sources": ["cache-objects"], "text": "Channel (Misthalin)"}
+{"sources": ["cache-objects"], "text": "Channel (Morytania)"}
+{"sources": ["cache-objects"], "text": "Channel (Tirannwn)"}
+{"sources": ["cache-objects"], "text": "Channel (Varlamore)"}
+{"sources": ["cache-objects"], "text": "Channel (Wilderness)"}
+{"sources": ["cache-items"], "text": "Chant"}
+{"sources": ["cache-items"], "text": "Chaos Temple"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Charge"}
+{"sources": ["cache-objects"], "text": "Charge-at"}
+{"sources": ["cache-objects"], "text": "Charm Snake"}
+{"sources": ["cache-objects"], "text": "Chart"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Aldarin"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Barracuda HQ"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Brimhaven"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Catherby"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Civitas illa Fortis"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Corsair Cove"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Deepfin Point"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Land's End"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Mos Le'Harmless"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Musa Point"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Port Khazard"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Port Phasmatys"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Port Piscarilius"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Port Roberts"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Port Sarim"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Port Tyras"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Prifddinas"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Red Rock"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Shipyard"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Sunset Coast"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to Tempestus"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to The Pandemonium"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Charter-to The Summer Shore"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Chase"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Check"}
+{"sources": ["cache-objects"], "text": "Check Kudos"}
+{"sources": ["cache-items"], "text": "Check Previous"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Check Scores"}
+{"sources": ["cache-items"], "text": "Check charges"}
+{"sources": ["cache-items"], "text": "Check completion"}
+{"sources": ["cache-objects"], "text": "Check count"}
+{"sources": ["cache-objects"], "text": "Check for Snakes"}
+{"sources": ["cache-items"], "text": "Check kills"}
+{"sources": ["cache-items"], "text": "Check rank"}
+{"sources": ["cache-items"], "text": "Check steps"}
+{"sources": ["cache-items"], "text": "Check tax"}
+{"sources": ["cache-items"], "text": "Check taxes"}
+{"sources": ["cache-items"], "text": "Check totals"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Check-Approval"}
+{"sources": ["cache-objects"], "text": "Check-Count"}
+{"sources": ["cache-objects"], "text": "Check-Faith"}
+{"sources": ["cache-objects"], "text": "Check-Fee"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Check-ammo"}
+{"sources": ["cache-objects"], "text": "Check-ammunition"}
+{"sources": ["cache-items"], "text": "Check-charge"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Check-costume"}
+{"sources": ["cache-items"], "text": "Check-eggs"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Check-gates"}
+{"sources": ["cache-objects"], "text": "Check-health"}
+{"sources": ["cache-items"], "text": "Check-keys"}
+{"sources": ["cache-items"], "text": "Check-level"}
+{"sources": ["cache-items"], "text": "Check-memories"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Check-on"}
+{"sources": ["cache-objects"], "text": "Check-permissions"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Check-pets"}
+{"sources": ["cache-objects"], "text": "Check-statistics (Global)"}
+{"sources": ["cache-objects"], "text": "Check-statistics (Personal)"}
+{"sources": ["cache-objects"], "text": "Check-times"}
+{"sources": ["cache-items"], "text": "Check/Uncharge"}
+{"sources": ["cache-items"], "text": "Chew"}
+{"sources": ["cache-items"], "text": "Chill"}
+{"sources": ["cache-objects"], "text": "Chip"}
+{"sources": ["cache-items"], "text": "Chomp"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Choose"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Chop"}
+{"sources": ["cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Chop down"}
+{"sources": ["cache-objects"], "text": "Chop-down"}
+{"sources": ["cache-objects"], "text": "Churn"}
+{"sources": ["cache-objects"], "text": "Cimb-down"}
+{"sources": ["cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Claim"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim Pet Rock"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim Sand"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim-Shield"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim-Tokens"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim-arrows"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim-cape"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim-hats"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim-log-rewards"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim-rewards"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim-runes"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim-slime"}
+{"sources": ["cache-objects"], "text": "Claim-staves"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Claim-trophies"}
+{"sources": ["cache-objects"], "text": "Clamber"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Clean"}
+{"sources": ["cache-objects"], "text": "Cleanse"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Clear"}
+{"sources": ["cache-objects"], "text": "Climb"}
+{"sources": ["cache-objects"], "text": "Climb Down"}
+{"sources": ["cache-objects"], "text": "Climb Up"}
+{"sources": ["cache-objects"], "text": "Climb down"}
+{"sources": ["cache-objects"], "text": "Climb over"}
+{"sources": ["cache-objects"], "text": "Climb through"}
+{"sources": ["cache-objects"], "text": "Climb up"}
+{"sources": ["cache-objects"], "text": "Climb-across"}
+{"sources": ["cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Climb-down"}
+{"sources": ["cache-objects"], "text": "Climb-down (normal)"}
+{"sources": ["cache-objects"], "text": "Climb-down (private)"}
+{"sources": ["cache-objects"], "text": "Climb-into"}
+{"sources": ["cache-objects"], "text": "Climb-off"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Climb-on"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Climb-over"}
+{"sources": ["cache-objects"], "text": "Climb-rope"}
+{"sources": ["cache-objects"], "text": "Climb-through"}
+{"sources": ["cache-objects"], "text": "Climb-through (normal)"}
+{"sources": ["cache-objects"], "text": "Climb-through (private)"}
+{"sources": ["cache-objects"], "text": "Climb-to"}
+{"sources": ["cache-objects"], "text": "Climb-under"}
+{"sources": ["cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Climb-up"}
+{"sources": ["cache-objects"], "text": "Climp-up"}
+{"sources": ["cache-objects"], "text": "Clip"}
+{"sources": ["cache-items", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Close"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Coffer"}
+{"sources": ["cache-items"], "text": "Coin Collection"}
+{"sources": ["cache-items", "cache-objects"], "text": "Collapse"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Collect"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Collect-data"}
+{"sources": ["cache-objects"], "text": "Collect-from"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Collect-items"}
+{"sources": ["cache-objects"], "text": "Collect-rum"}
+{"sources": ["cache-items"], "text": "Collections overview"}
+{"sources": ["cache-items"], "text": "Colour"}
+{"sources": ["cache-items"], "text": "Combine"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Command"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Commission"}
+{"sources": ["cache-items", "cache-objects"], "text": "Commune"}
+{"sources": ["cache-items", "cache-objects"], "text": "Complete"}
+{"sources": ["cache-objects"], "text": "Concentrate-potion"}
+{"sources": ["cache-items"], "text": "Config"}
+{"sources": ["cache-objects"], "text": "Configuration"}
+{"sources": ["cache-items", "cache-objects"], "text": "Configure"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Confront"}
+{"sources": ["cache-objects"], "text": "Conjure"}
+{"sources": ["cache-objects"], "text": "Construct"}
+{"sources": ["cache-items"], "text": "Consult"}
+{"sources": ["cache-items"], "text": "Consume"}
+{"sources": ["cache-items"], "text": "Contact"}
+{"sources": ["cache-items"], "text": "Contact Master"}
+{"sources": ["cache-objects"], "text": "Continue"}
+{"sources": ["cache-objects"], "text": "Continue-trek"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Contract"}
+{"sources": ["cache-items", "cache-objects"], "text": "Control"}
+{"sources": ["cache-items", "cache-objects"], "text": "Convert"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Convert-shards"}
+{"sources": ["cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Cook"}
+{"sources": ["cache-objects"], "text": "Cook-at"}
+{"sources": ["cache-items", "cache-objects"], "text": "Cooking Guild"}
+{"sources": ["cache-objects"], "text": "Cool-preform"}
+{"sources": ["cache-items"], "text": "Copy to log"}
+{"sources": ["cache-items", "cache-objects"], "text": "Corporeal Beast"}
+{"sources": ["cache-items", "cache-objects"], "text": "Count"}
+{"sources": ["cache-objects"], "text": "Count-plunder"}
+{"sources": ["cache-items", "cache-objects"], "text": "Crack"}
+{"sources": ["cache-items"], "text": "Crack-open"}
+{"sources": ["cache-items", "cache-objects"], "text": "Craft"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Craft-goods"}
+{"sources": ["cache-objects"], "text": "Craft-hull-parts"}
+{"sources": ["cache-objects"], "text": "Craft-repair-kits"}
+{"sources": ["cache-objects"], "text": "Craft-rune"}
+{"sources": ["cache-items", "cache-objects"], "text": "Crafting Guild"}
+{"sources": ["cache-objects"], "text": "Crawl"}
+{"sources": ["cache-objects"], "text": "Crawl through"}
+{"sources": ["cache-objects"], "text": "Crawl-down"}
+{"sources": ["cache-objects"], "text": "Crawl-through"}
+{"sources": ["cache-objects"], "text": "Crawl-under"}
+{"sources": ["cache-items"], "text": "Crazy"}
+{"sources": ["cache-items"], "text": "Create-book"}
+{"sources": ["cache-objects"], "text": "Create-last"}
+{"sources": ["cache-objects"], "text": "Cross"}
+{"sources": ["cache-objects"], "text": "Cross-bridge"}
+{"sources": ["cache-objects"], "text": "Cross-over"}
+{"sources": ["cache-objects"], "text": "Cross-to"}
+{"sources": ["cache-items"], "text": "Crush"}
+{"sources": ["cache-objects"], "text": "Crystalise-potion"}
+{"sources": ["cache-objects"], "text": "Cure"}
+{"sources": ["cache-items"], "text": "Current-step"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Customise-boat"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Cut"}
+{"sources": ["cache-objects"], "text": "Cut down"}
+{"sources": ["cache-objects"], "text": "Cut-Down"}
+{"sources": ["cache-objects"], "text": "Cut-branch"}
+{"sources": ["cache-objects"], "text": "Cut-foot"}
+{"sources": ["cache-items"], "text": "Cut-open"}
+{"sources": ["cache-objects"], "text": "Cut-vine"}
+{"sources": ["cache-objects"], "text": "Cut-wood"}
+{"sources": ["cache-objects"], "text": "DIP"}
+{"sources": ["cache-objects"], "text": "DIQ"}
+{"sources": ["cache-objects"], "text": "DIR"}
+{"sources": ["cache-objects"], "text": "DIS"}
+{"sources": ["cache-objects"], "text": "DJP"}
+{"sources": ["cache-objects"], "text": "DJQ"}
+{"sources": ["cache-objects"], "text": "DJR"}
+{"sources": ["cache-objects"], "text": "DJS"}
+{"sources": ["cache-objects"], "text": "DKP"}
+{"sources": ["cache-objects"], "text": "DKQ"}
+{"sources": ["cache-objects"], "text": "DKR"}
+{"sources": ["cache-objects"], "text": "DKS"}
+{"sources": ["cache-objects"], "text": "DLP"}
+{"sources": ["cache-objects"], "text": "DLQ"}
+{"sources": ["cache-objects"], "text": "DLR"}
+{"sources": ["cache-objects"], "text": "DLS"}
+{"sources": ["cache-items"], "text": "Dance"}
+{"sources": ["cache-items"], "text": "Dark Beasts"}
+{"sources": ["cache-items"], "text": "Darkfrost"}
+{"sources": ["cache-items"], "text": "Darkmeyer"}
+{"sources": ["cache-objects"], "text": "Deactivate"}
+{"sources": ["cache-items"], "text": "Debug"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Decant"}
+{"sources": ["cache-objects"], "text": "Decapitate"}
+{"sources": ["cache-objects"], "text": "Decorate"}
+{"sources": ["cache-items"], "text": "Deepfin Point"}
+{"sources": ["cache-objects"], "text": "Deliver-rum"}
+{"sources": ["cache-objects"], "text": "Delve-stats"}
+{"sources": ["cache-objects"], "text": "Demolish"}
+{"sources": ["cache-objects"], "text": "Deploy"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Deposit"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Deposit buckets"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Deposit-all"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Deposit-box"}
+{"sources": ["cache-objects"], "text": "Deposit-cargo"}
+{"sources": ["cache-objects"], "text": "Deposit-eggs"}
+{"sources": ["cache-objects"], "text": "Deposit-held"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Deposit-items"}
+{"sources": ["cache-objects"], "text": "Deposit-pickaxe"}
+{"sources": ["cache-objects"], "text": "Deposit-runes"}
+{"sources": ["cache-objects"], "text": "Descend"}
+{"sources": ["cache-items"], "text": "Desert"}
+{"sources": ["cache-items"], "text": "Destinations"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Destroy"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Detach"}
+{"sources": ["cache-items"], "text": "Detatch"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Devices"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects"], "text": "Dig"}
+{"sources": ["cache-objects"], "text": "Dig-below"}
+{"sources": ["cache-objects"], "text": "Dig-up"}
+{"sources": ["cache-items", "cache-objects"], "text": "Digsite"}
+{"sources": ["cache-objects"], "text": "Direct-portal"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Directions"}
+{"sources": ["cache-objects"], "text": "Disable"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Disable-XP"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Disarm"}
+{"sources": ["cache-items"], "text": "Disassemble"}
+{"sources": ["cache-items"], "text": "Discard"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Disembark"}
+{"sources": ["cache-items", "cache-objects"], "text": "Dismantle"}
+{"sources": ["cache-items"], "text": "Dismantle kit"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Dismiss"}
+{"sources": ["cache-objects"], "text": "Dispel"}
+{"sources": ["cache-items"], "text": "Display"}
+{"sources": ["cache-items"], "text": "Dispose"}
+{"sources": ["cache-items"], "text": "Dissolve"}
+{"sources": ["cache-objects"], "text": "Distract"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Disturb"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Dive"}
+{"sources": ["cache-objects"], "text": "Dive in"}
+{"sources": ["cache-items"], "text": "Divine"}
+{"sources": ["cache-objects"], "text": "Dock"}
+{"sources": ["cache-items"], "text": "Dondakan"}
+{"sources": ["cache-objects"], "text": "Dondakan's Rock"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Douse"}
+{"sources": ["cache-objects"], "text": "Drain"}
+{"sources": ["cache-items", "cache-objects"], "text": "Draynor Village"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Dream"}
+{"sources": ["cache-items", "cache-objects"], "text": "Drink"}
+{"sources": ["cache-objects"], "text": "Drink-from"}
+{"sources": ["cache-items", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Drop"}
+{"sources": ["cache-objects"], "text": "Dump"}
+{"sources": ["cache-objects"], "text": "Dunk"}
+{"sources": ["cache-objects"], "text": "Dunk-preform"}
+{"sources": ["cache-items"], "text": "Dust-hands"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Dyes"}
+{"sources": ["cache-items"], "text": "Eagles' Eyrie"}
+{"sources": ["cache-items"], "text": "Earth Altar"}
+{"sources": ["cache-items"], "text": "Easter dance"}
+{"sources": ["cache-items", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Eat"}
+{"sources": ["cache-items"], "text": "Eat-from"}
+{"sources": ["cache-items"], "text": "Ecto Teleport"}
+{"sources": ["cache-items", "cache-objects"], "text": "Edgeville"}
+{"sources": ["cache-items"], "text": "Elite"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Embark"}
+{"sources": ["cache-items", "cache-objects"], "text": "Emir's Arena"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Emote"}
+{"sources": ["cache-items", "cache-objects"], "text": "Empty"}
+{"sources": ["cache-items"], "text": "Empty Bowl"}
+{"sources": ["cache-items"], "text": "Empty Dish"}
+{"sources": ["cache-items"], "text": "Empty Tin"}
+{"sources": ["cache-items"], "text": "Empty Tray"}
+{"sources": ["cache-items"], "text": "Empty basket"}
+{"sources": ["cache-objects"], "text": "Empty-Out"}
+{"sources": ["cache-items"], "text": "Enakhra's Temple"}
+{"sources": ["cache-items"], "text": "Enakhra's Temple Entrance"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Enchant"}
+{"sources": ["cache-items"], "text": "Enchant-Vials"}
+{"sources": ["cache-items"], "text": "Energy"}
+{"sources": ["cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Enter"}
+{"sources": ["cache-objects"], "text": "Enter-cloud"}
+{"sources": ["cache-objects"], "text": "Enter-corrupted"}
+{"sources": ["cache-objects"], "text": "Enter-crypt"}
+{"sources": ["cache-objects"], "text": "Enter-guest"}
+{"sources": ["cache-objects"], "text": "Enter-member"}
+{"sources": ["cache-objects"], "text": "Entertain"}
+{"sources": ["cache-items", "cache-objects"], "text": "Equip"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Escape"}
+{"sources": ["cache-objects"], "text": "Escape-event"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Escort"}
+{"sources": ["cache-objects"], "text": "Etceteria"}
+{"sources": ["cache-items"], "text": "Etch"}
+{"sources": ["cache-objects"], "text": "Evade"}
+{"sources": ["cache-objects"], "text": "Evade-event"}
+{"sources": ["cache-items"], "text": "Events"}
+{"sources": ["cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Examine"}
+{"sources": ["cache-objects"], "text": "Excavate"}
+{"sources": ["cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Exchange"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Exchange fire cape"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Exit"}
+{"sources": ["cache-objects"], "text": "Exit-cave"}
+{"sources": ["cache-objects"], "text": "Exit-through"}
+{"sources": ["cache-objects"], "text": "Exit-through (Kourend)"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Extinguish"}
+{"sources": ["cache-items"], "text": "Extract"}
+{"sources": ["cache-items"], "text": "Fairy-ring"}
+{"sources": ["cache-items"], "text": "Falador"}
+{"sources": ["cache-objects"], "text": "Falador Park"}
+{"sources": ["cache-items"], "text": "Farm Teleport"}
+{"sources": ["cache-items", "cache-objects"], "text": "Farming Guild"}
+{"sources": ["cache-objects"], "text": "Favourite 1"}
+{"sources": ["cache-objects"], "text": "Favourite 10"}
+{"sources": ["cache-objects"], "text": "Favourite 2"}
+{"sources": ["cache-objects"], "text": "Favourite 3"}
+{"sources": ["cache-objects"], "text": "Favourite 4"}
+{"sources": ["cache-objects"], "text": "Favourite 5"}
+{"sources": ["cache-objects"], "text": "Favourite 6"}
+{"sources": ["cache-objects"], "text": "Favourite 7"}
+{"sources": ["cache-objects"], "text": "Favourite 8"}
+{"sources": ["cache-objects"], "text": "Favourite 9"}
+{"sources": ["cache-objects"], "text": "Favourites"}
+{"sources": ["cache-items"], "text": "Features"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Feed"}
+{"sources": ["cache-items", "cache-objects"], "text": "Feel"}
+{"sources": ["cache-items", "cache-objects"], "text": "Feldip Hills"}
+{"sources": ["cache-items", "cache-objects"], "text": "Ferox Enclave"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Ferry"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Fight"}
+{"sources": ["cache-objects"], "text": "Fight-privately"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Fill"}
+{"sources": ["cache-objects"], "text": "Fill-bucket"}
+{"sources": ["cache-objects"], "text": "Fill-from"}
+{"sources": ["cache-items"], "text": "Fill-in"}
+{"sources": ["cache-objects"], "text": "Fill-jug"}
+{"sources": ["cache-objects"], "text": "Fire"}
+{"sources": ["cache-items"], "text": "Fire Altar"}
+{"sources": ["cache-objects"], "text": "Fire!"}
+{"sources": ["cache-objects"], "text": "Fire-at"}
+{"sources": ["cache-items"], "text": "Fireworks"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Fish"}
+{"sources": ["cache-objects"], "text": "Fish-in"}
+{"sources": ["cache-items", "cache-objects"], "text": "Fishing Guild"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Fix"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Fix-exoskeleton"}
+{"sources": ["cache-items"], "text": "Fletch"}
+{"sources": ["cache-objects"], "text": "Flip"}
+{"sources": ["cache-objects"], "text": "Float Canoe"}
+{"sources": ["cache-objects"], "text": "Float Log"}
+{"sources": ["cache-objects"], "text": "Flush"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Fly"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Follow"}
+{"sources": ["cache-objects"], "text": "Force"}
+{"sources": ["cache-items"], "text": "Forestry kit"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Forfeit"}
+{"sources": ["cache-items", "cache-objects"], "text": "Fortis Colosseum"}
+{"sources": ["cache-items", "cache-objects"], "text": "Fossil Island"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Free"}
+{"sources": ["cache-items"], "text": "Fremennik"}
+{"sources": ["cache-items"], "text": "Fremennik Dungeon"}
+{"sources": ["cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Friend's house"}
+{"sources": ["cache-items"], "text": "Fry"}
+{"sources": ["cache-objects"], "text": "Fuel"}
+{"sources": ["cache-objects"], "text": "Fulfil-order"}
+{"sources": ["cache-items"], "text": "Functions"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Fur Clothing"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Fur-clothing"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Gauntlets"}
+{"sources": ["cache-objects"], "text": "Gaze-into"}
+{"sources": ["cache-objects"], "text": "Gear"}
+{"sources": ["cache-items"], "text": "Gem Mine"}
+{"sources": ["cache-objects"], "text": "General-stats"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Get bird"}
+{"sources": ["cache-objects"], "text": "Get in"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Get job (easy)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Get job (hard)"}
+{"sources": ["cache-objects"], "text": "Get-Spikes"}
+{"sources": ["cache-objects"], "text": "Get-down"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Get-log"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Get-rewards"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Get-training"}
+{"sources": ["cache-items"], "text": "Ghorrock Dungeon"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Give-Stick"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Give-Sword"}
+{"sources": ["cache-npcs"], "text": "Give-feathers"}
+{"sources": ["cache-objects"], "text": "Glade"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Glider"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Glider-to Gandius"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Glider-to Kar-Hewo"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Glider-to Lemanto Andra"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Glider-to Lemantolly Undri"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Glider-to Ookookolly Undri"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Glider-to Sindarpos"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Glider-to Ta Quir Priw"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Gloomthorn Trail"}
+{"sources": ["cache-objects"], "text": "Gnome Stronghold"}
+{"sources": ["cache-objects"], "text": "Go-down"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Go-inside"}
+{"sources": ["cache-objects"], "text": "Go-through"}
+{"sources": ["cache-objects"], "text": "Go-up"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Grab"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Grab-feather"}
+{"sources": ["cache-items", "cache-objects"], "text": "Grand Exchange"}
+{"sources": ["cache-objects"], "text": "Grapple"}
+{"sources": ["cache-items"], "text": "Group"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Guess-letter"}
+{"sources": ["cache-objects"], "text": "Guide"}
+{"sources": ["cache-items"], "text": "Guzzle"}
+{"sources": ["cache-objects"], "text": "Hack"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Haircut"}
+{"sources": ["cache-objects"], "text": "Hammer"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Hand-in"}
+{"sources": ["cache-objects"], "text": "Hang-over"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Harpoon"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Harvest"}
+{"sources": ["cache-objects"], "text": "Harvest-from"}
+{"sources": ["cache-items"], "text": "Hasty-rummage"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Heal"}
+{"sources": ["cache-objects"], "text": "Heart"}
+{"sources": ["cache-objects"], "text": "Heat-preform"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Help"}
+{"sources": ["cache-npcs"], "text": "Hide"}
+{"sources": ["cache-objects"], "text": "Hide-behind"}
+{"sources": ["cache-objects"], "text": "Hide-in"}
+{"sources": ["cache-items", "cache-npcs", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "History"}
+{"sources": ["cache-items"], "text": "History and Hearsay"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Hit"}
+{"sources": ["cache-items"], "text": "Hold"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Holiday-items"}
+{"sources": ["cache-items", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Home"}
+{"sources": ["cache-objects"], "text": "Homogenise-potion"}
+{"sources": ["cache-objects"], "text": "Honour"}
+{"sources": ["cache-objects"], "text": "Hoop"}
+{"sources": ["cache-items", "cache-objects"], "text": "Hosidius"}
+{"sources": ["cache-items"], "text": "Hunter Guild"}
+{"sources": ["cache-objects"], "text": "Hurdle"}
+{"sources": ["cache-objects"], "text": "Iceberg"}
+{"sources": ["cache-objects"], "text": "Imbue"}
+{"sources": ["cache-items"], "text": "Impling-jar"}
+{"sources": ["cache-npcs"], "text": "Increase speed"}
+{"sources": ["cache-objects"], "text": "Inferno"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Inflate"}
+{"sources": ["cache-items"], "text": "Info"}
+{"sources": ["cache-npcs"], "text": "Information"}
+{"sources": ["cache-objects"], "text": "Inject"}
+{"sources": ["cache-objects"], "text": "Insert-core"}
+{"sources": ["cache-items"], "text": "Inside"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Inspect"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Insult"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Interact"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Intimidate"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Investigate"}
+{"sources": ["cache-items"], "text": "Invigorate"}
+{"sources": ["cache-items"], "text": "Invoke"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Island of Stone"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Items"}
+{"sources": ["cache-items"], "text": "Jaldraocht"}
+{"sources": ["cache-items"], "text": "Jaleustrophos"}
+{"sources": ["cache-items"], "text": "Jalsavrah"}
+{"sources": ["cache-items"], "text": "Jaltevas"}
+{"sources": ["cache-objects"], "text": "Jars"}
+{"sources": ["cache-items"], "text": "Jatiszo"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Jatizso"}
+{"sources": ["cache-items"], "text": "Jewellery"}
+{"sources": ["cache-items"], "text": "Jewellery of Jubilation"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Join"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Join Castle Wars"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Join-Crew"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Join-Team"}
+{"sources": ["cache-items", "cache-objects"], "text": "Jump"}
+{"sources": ["cache-objects"], "text": "Jump off"}
+{"sources": ["cache-objects"], "text": "Jump on"}
+{"sources": ["cache-objects"], "text": "Jump to"}
+{"sources": ["cache-objects"], "text": "Jump-Across"}
+{"sources": ["cache-objects"], "text": "Jump-Down"}
+{"sources": ["cache-objects"], "text": "Jump-Over"}
+{"sources": ["cache-objects"], "text": "Jump-To"}
+{"sources": ["cache-objects"], "text": "Jump-across"}
+{"sources": ["cache-objects"], "text": "Jump-down"}
+{"sources": ["cache-objects"], "text": "Jump-from"}
+{"sources": ["cache-objects"], "text": "Jump-in"}
+{"sources": ["cache-objects"], "text": "Jump-off"}
+{"sources": ["cache-objects"], "text": "Jump-on"}
+{"sources": ["cache-objects"], "text": "Jump-onto"}
+{"sources": ["cache-objects"], "text": "Jump-over"}
+{"sources": ["cache-objects"], "text": "Jump-through"}
+{"sources": ["cache-objects"], "text": "Jump-to"}
+{"sources": ["cache-objects"], "text": "Jump-up"}
+{"sources": ["cache-items"], "text": "Kalphite cave"}
+{"sources": ["cache-items"], "text": "Kandarin"}
+{"sources": ["cache-items", "cache-objects"], "text": "Karamja"}
+{"sources": ["cache-items"], "text": "Karamja (Jungle)"}
+{"sources": ["cache-items"], "text": "Karamja (Mor Ul Rek)"}
+{"sources": ["cache-items"], "text": "Karamja (Shilo)"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Kastori"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Kick"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Kill"}
+{"sources": ["cache-items"], "text": "Kill Area"}
+{"sources": ["cache-items"], "text": "Kill Bot"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Kill-count"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Kitten"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Knock-Out"}
+{"sources": ["cache-objects"], "text": "Knock-at"}
+{"sources": ["cache-items"], "text": "Kourend"}
+{"sources": ["cache-items"], "text": "Kourend & Kebos"}
+{"sources": ["cache-items"], "text": "Kourend Woodland"}
+{"sources": ["cache-objects"], "text": "Laguna Aurorae"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Land's End"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Lap-count"}
+{"sources": ["cache-items"], "text": "Lassar Undercity"}
+{"sources": ["cache-items"], "text": "Last Destination"}
+{"sources": ["cache-items", "cache-objects"], "text": "Last boat"}
+{"sources": ["cache-items"], "text": "Last-Teleport"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Last-destination"}
+{"sources": ["cache-objects"], "text": "Last-destination (AIP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (AIQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (AIR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (AIS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (AJP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (AJQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (AJR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (AJS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (AKP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (AKQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (AKR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (AKS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (ALP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (ALQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (ALR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (ALS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BIP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BIQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BIR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BIS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BJP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BJQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BJR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BJS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BKP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BKQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BKR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BKS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BLP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BLQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BLR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (BLS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CIP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CIQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CIR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CIS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CJP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CJQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CJR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CJS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CKP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CKQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CKR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CKS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CLP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CLQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CLR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (CLS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DIP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DIQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DIR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DIS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DJP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DJQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DJR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DJS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DKP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DKQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DKR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DKS)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DLP)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DLQ)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DLR)"}
+{"sources": ["cache-objects"], "text": "Last-destination (DLS)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Last-tier contract"}
+{"sources": ["cache-items"], "text": "Launch"}
+{"sources": ["cache-objects"], "text": "Launch-toad-at"}
+{"sources": ["cache-items"], "text": "Lava Maze"}
+{"sources": ["cache-items"], "text": "Lay"}
+{"sources": ["cache-items"], "text": "League Debug"}
+{"sources": ["cache-objects"], "text": "League-firsts"}
+{"sources": ["cache-objects"], "text": "League-rankings"}
+{"sources": ["cache-objects"], "text": "League-statistics"}
+{"sources": ["cache-objects"], "text": "Leap"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Leave"}
+{"sources": ["cache-objects"], "text": "Leave Cavern"}
+{"sources": ["cache-objects"], "text": "Leave Tomb"}
+{"sources": ["cache-objects"], "text": "Leave platform"}
+{"sources": ["cache-objects"], "text": "Leave-area"}
+{"sources": ["cache-objects"], "text": "Leave-group"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Leave-tutorial"}
+{"sources": ["cache-objects"], "text": "Level"}
+{"sources": ["cache-objects"], "text": "Lift"}
+{"sources": ["cache-items", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Light"}
+{"sources": ["cache-objects"], "text": "Line"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Listen"}
+{"sources": ["cache-objects"], "text": "Listen-at"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Listen-to"}
+{"sources": ["cache-objects"], "text": "Lithkren"}
+{"sources": ["cache-items"], "text": "Lithkren Dungeon"}
+{"sources": ["cache-items"], "text": "Lletya"}
+{"sources": ["cache-items", "cache-objects"], "text": "Load"}
+{"sources": ["cache-objects"], "text": "Load X"}
+{"sources": ["cache-items"], "text": "Load-out"}
+{"sources": ["cache-npcs", "cache-objects"], "text": "Load-outs"}
+{"sources": ["cache-items"], "text": "Locate"}
+{"sources": ["cache-objects"], "text": "Locate-shoal"}
+{"sources": ["cache-objects"], "text": "Lock"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Locking"}
+{"sources": ["cache-objects"], "text": "Lockpick"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Locks"}
+{"sources": ["cache-items"], "text": "Log"}
+{"sources": ["cache-items"], "text": "Log basket"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Log-storage"}
+{"sources": ["local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Logout"}
+{"sources": ["cache-items", "cache-objects"], "text": "Look"}
+{"sources": ["cache-items", "cache-objects"], "text": "Look at"}
+{"sources": ["cache-objects"], "text": "Look in"}
+{"sources": ["cache-objects"], "text": "Look out"}
+{"sources": ["cache-items"], "text": "Look through"}
+{"sources": ["cache-items", "cache-objects"], "text": "Look-at"}
+{"sources": ["cache-items", "cache-objects"], "text": "Look-in"}
+{"sources": ["cache-objects"], "text": "Look-in-all"}
+{"sources": ["cache-objects"], "text": "Look-inside"}
+{"sources": ["cache-objects"], "text": "Look-into"}
+{"sources": ["cache-objects"], "text": "Look-over"}
+{"sources": ["cache-items", "cache-objects"], "text": "Look-through"}
+{"sources": ["cache-objects"], "text": "Look-under"}
+{"sources": ["cache-objects"], "text": "Look-up"}
+{"sources": ["cache-items"], "text": "Loop"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Loot"}
+{"sources": ["cache-items"], "text": "Looting"}
+{"sources": ["cache-objects"], "text": "Lower"}
+{"sources": ["cache-npcs"], "text": "Lower speed"}
+{"sources": ["cache-items"], "text": "Lumbridge & Draynor"}
+{"sources": ["cache-items", "cache-objects"], "text": "Lunar"}
+{"sources": ["cache-objects"], "text": "Lunar spellbook"}
+{"sources": ["cache-items"], "text": "Lunch by the Lancalliums"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Lure"}
+{"sources": ["cache-objects"], "text": "Make"}
+{"sources": ["cache-items"], "text": "Make scary noise"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Make unfinished potion(s)"}
+{"sources": ["cache-objects"], "text": "Make-Canoe"}
+{"sources": ["cache-objects"], "text": "Make-cuppa"}
+{"sources": ["cache-objects"], "text": "Make-helmet"}
+{"sources": ["cache-objects"], "text": "Make-offering"}
+{"sources": ["cache-objects"], "text": "Make-raft"}
+{"sources": ["cache-npcs", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Makeover"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Manage-crew"}
+{"sources": ["cache-items"], "text": "Manage-kingdom"}
+{"sources": ["cache-objects"], "text": "Manoeuvre-past"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Mark"}
+{"sources": ["cache-items"], "text": "Mash"}
+{"sources": ["cache-items"], "text": "Master"}
+{"sources": ["cache-items"], "text": "Max Players"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Maxhit Variant"}
+{"sources": ["cache-items"], "text": "Medic"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Melt"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Metamorph"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Metamorphosis"}
+{"sources": ["cache-items"], "text": "Middle entrance"}
+{"sources": ["cache-objects"], "text": "Milk"}
+{"sources": ["cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Mine"}
+{"sources": ["cache-objects"], "text": "Mine-through"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Mines"}
+{"sources": ["cache-items", "cache-objects"], "text": "Mining Guild"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Miscellania"}
+{"sources": ["cache-items"], "text": "Mix-cocktail"}
+{"sources": ["cache-objects"], "text": "Modify"}
+{"sources": ["cache-items", "cache-objects"], "text": "Monastery"}
+{"sources": ["cache-items"], "text": "Monastery Teleport"}
+{"sources": ["cache-items"], "text": "Mor Ul Rek"}
+{"sources": ["cache-items", "cache-npcs"], "text": "Morytania"}
+{"sources": ["cache-items"], "text": "Mount Karuulm"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Move"}
+{"sources": ["cache-objects"], "text": "Move-Itzla"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Murder"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Musa Point"}
+{"sources": ["cache-items"], "text": "Nardah"}
+{"sources": ["cache-objects"], "text": "Navigate"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Neitiznot"}
+{"sources": ["cache-items"], "text": "Nemus Retreat"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Net"}
+{"sources": ["cache-objects"], "text": "Nets"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "New-maze"}
+{"sources": ["cache-items"], "text": "Nexus"}
+{"sources": ["cache-items"], "text": "North Aldarin"}
+{"sources": ["cache-items"], "text": "Northern entrance"}
+{"sources": ["cache-items"], "text": "Note-Quantity"}
+{"sources": ["cache-items"], "text": "Note/Unnote"}
+{"sources": ["cache-items"], "text": "Notes"}
+{"sources": ["cache-items"], "text": "Obor"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Observe"}
+{"sources": ["cache-objects"], "text": "Offer-fish"}
+{"sources": ["cache-items", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Open"}
+{"sources": ["cache-objects"], "text": "Open (normal)"}
+{"sources": ["cache-objects"], "text": "Open (private)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Open Adventure Paths"}
+{"sources": ["cache-items"], "text": "Open Log"}
+{"sources": ["cache-items"], "text": "Open-all"}
+{"sources": ["cache-npcs"], "text": "Open-stomach"}
+{"sources": ["cache-items"], "text": "Open/Close"}
+{"sources": ["cache-items"], "text": "Open/close"}
+{"sources": ["cache-items", "cache-objects"], "text": "Operate"}
+{"sources": ["cache-items"], "text": "Options"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Other-services"}
+{"sources": ["cache-items"], "text": "Otto's Grotto"}
+{"sources": ["cache-items"], "text": "Outside"}
+{"sources": ["cache-items"], "text": "POH Portals"}
+{"sources": ["cache-items"], "text": "Pack"}
+{"sources": ["cache-objects"], "text": "Paddle Canoe"}
+{"sources": ["cache-objects"], "text": "Paddle Log"}
+{"sources": ["cache-items"], "text": "Pages"}
+{"sources": ["cache-items"], "text": "Paint"}
+{"sources": ["cache-objects"], "text": "Pan"}
+{"sources": ["cache-items"], "text": "Partner"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Pass"}
+{"sources": ["cache-objects"], "text": "Pass (normal)"}
+{"sources": ["cache-objects"], "text": "Pass (private)"}
+{"sources": ["cache-objects"], "text": "Pass through"}
+{"sources": ["cache-objects"], "text": "Pass-Through"}
+{"sources": ["cache-objects"], "text": "Pass-through"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pass-to"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Pay"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (Celastrus tree)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (Fruit tree)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (Redwood tree)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (Spirit tree)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (east)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (north)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (north-east)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (north-west)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (south)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (south-east)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (south-west)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (tree patch)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pay (west)"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Pay-fare"}
+{"sources": ["cache-objects"], "text": "Pay-toll(10gp)"}
+{"sources": ["cache-objects"], "text": "Pay-toll(2-Ecto)"}
+{"sources": ["cache-objects"], "text": "Pedal"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Peek"}
+{"sources": ["cache-objects"], "text": "Peek (normal)"}
+{"sources": ["cache-items"], "text": "Peel"}
+{"sources": ["cache-objects"], "text": "Peer-into"}
+{"sources": ["cache-objects"], "text": "Peer-through"}
+{"sources": ["cache-objects"], "text": "Perks"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Pet"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Pick"}
+{"sources": ["cache-objects"], "text": "Pick Banana"}
+{"sources": ["cache-objects"], "text": "Pick Nuts"}
+{"sources": ["cache-objects"], "text": "Pick up"}
+{"sources": ["cache-objects"], "text": "Pick-Fruit"}
+{"sources": ["cache-objects"], "text": "Pick-Lock"}
+{"sources": ["cache-objects"], "text": "Pick-apple"}
+{"sources": ["cache-objects"], "text": "Pick-banana"}
+{"sources": ["cache-objects"], "text": "Pick-coconut"}
+{"sources": ["cache-objects"], "text": "Pick-dragonfruit"}
+{"sources": ["cache-objects"], "text": "Pick-from"}
+{"sources": ["cache-objects"], "text": "Pick-fruit"}
+{"sources": ["cache-objects"], "text": "Pick-leaf"}
+{"sources": ["cache-objects"], "text": "Pick-lock"}
+{"sources": ["cache-objects"], "text": "Pick-lots"}
+{"sources": ["cache-objects"], "text": "Pick-orange"}
+{"sources": ["cache-objects"], "text": "Pick-pineapple"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pick-pocket"}
+{"sources": ["cache-objects"], "text": "Pick-spine"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Pick-up"}
+{"sources": ["cache-items"], "text": "Pickle"}
+{"sources": ["cache-objects"], "text": "Picklock"}
+{"sources": ["cache-npcs", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Pickpocket"}
+{"sources": ["cache-objects"], "text": "Pickup"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Pirate's Cove"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Place"}
+{"sources": ["cache-objects"], "text": "Place-cell"}
+{"sources": ["cache-objects"], "text": "Place-item"}
+{"sources": ["cache-items", "cache-objects"], "text": "Plant"}
+{"sources": ["cache-objects"], "text": "Plant-evidence"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Plant-orb"}
+{"sources": ["cache-items", "cache-objects"], "text": "Play"}
+{"sources": ["cache-items"], "text": "Play-With"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Play-fetch"}
+{"sources": ["cache-objects"], "text": "Play-quietly"}
+{"sources": ["cache-items"], "text": "Play-with"}
+{"sources": ["cache-items"], "text": "Playback"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Pluck"}
+{"sources": ["cache-objects"], "text": "Plunder"}
+{"sources": ["cache-items"], "text": "Poach"}
+{"sources": ["cache-objects"], "text": "Poison Waste"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Poke"}
+{"sources": ["cache-items"], "text": "Polish"}
+{"sources": ["cache-items"], "text": "Pollnivneach"}
+{"sources": ["cache-objects"], "text": "Ponder"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Pop"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Port Piscarilius"}
+{"sources": ["cache-items"], "text": "Port Roberts"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Port Sarim"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Potions"}
+{"sources": ["cache-items", "cache-objects"], "text": "Pour"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Power-up"}
+{"sources": ["cache-objects"], "text": "Pray"}
+{"sources": ["cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Pray-at"}
+{"sources": ["cache-items"], "text": "Pray-over"}
+{"sources": ["cache-objects"], "text": "Pray-to"}
+{"sources": ["cache-items"], "text": "Prayers"}
+{"sources": ["cache-items"], "text": "Preach"}
+{"sources": ["cache-objects"], "text": "Preen"}
+{"sources": ["cache-objects"], "text": "Preferences"}
+{"sources": ["cache-items"], "text": "Prepare"}
+{"sources": ["cache-objects"], "text": "Prepare-fish"}
+{"sources": ["cache-objects"], "text": "Press"}
+{"sources": ["cache-items"], "text": "Previous Spellbook"}
+{"sources": ["cache-npcs", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Prices"}
+{"sources": ["cache-items", "cache-objects"], "text": "Prifddinas"}
+{"sources": ["cache-objects"], "text": "Private"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Proceed"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Prod"}
+{"sources": ["cache-objects"], "text": "Prospect"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Prune"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Prune-back"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Prune-sides"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Prune-top"}
+{"sources": ["cache-objects"], "text": "Pry-open"}
+{"sources": ["cache-items"], "text": "Puff"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Pull"}
+{"sources": ["cache-npcs"], "text": "Pull-back"}
+{"sources": ["cache-objects"], "text": "Pull-down"}
+{"sources": ["cache-objects"], "text": "Pull-lever"}
+{"sources": ["cache-objects"], "text": "Pull-spade"}
+{"sources": ["cache-objects"], "text": "Pump"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Purchase Amulet"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Push"}
+{"sources": ["cache-objects"], "text": "Push-against"}
+{"sources": ["cache-objects"], "text": "Push-through"}
+{"sources": ["cache-objects"], "text": "Push-up"}
+{"sources": ["cache-objects"], "text": "Put-inside"}
+{"sources": ["cache-objects"], "text": "Put-ore-on"}
+{"sources": ["cache-objects"], "text": "Quench"}
+{"sources": ["cache-objects"], "text": "Quench-preform"}
+{"sources": ["cache-items"], "text": "Question"}
+{"sources": ["cache-objects"], "text": "Quick Pass"}
+{"sources": ["cache-objects"], "text": "Quick-Board"}
+{"sources": ["cache-objects"], "text": "Quick-Enter"}
+{"sources": ["cache-objects"], "text": "Quick-Exit"}
+{"sources": ["cache-objects"], "text": "Quick-Pass"}
+{"sources": ["cache-objects"], "text": "Quick-Pay(100)"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Quick-Travel"}
+{"sources": ["cache-objects"], "text": "Quick-Use"}
+{"sources": ["cache-objects"], "text": "Quick-board"}
+{"sources": ["cache-objects"], "text": "Quick-climb"}
+{"sources": ["cache-objects"], "text": "Quick-enter"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Quick-escape"}
+{"sources": ["cache-npcs", "cache-objects"], "text": "Quick-exit"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Quick-falcon"}
+{"sources": ["cache-objects"], "text": "Quick-leave"}
+{"sources": ["cache-objects"], "text": "Quick-locate"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Quick-lock"}
+{"sources": ["cache-objects"], "text": "Quick-open"}
+{"sources": ["cache-objects"], "text": "Quick-pass"}
+{"sources": ["cache-objects"], "text": "Quick-slide"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Quick-start"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Quick-travel"}
+{"sources": ["cache-objects"], "text": "Quick-use"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Quick-withdraw"}
+{"sources": ["cache-objects"], "text": "Raise"}
+{"sources": ["cache-objects"], "text": "Rake"}
+{"sources": ["cache-items"], "text": "Ralos' Rise"}
+{"sources": ["cache-items", "cache-objects"], "text": "Ranging Guild"}
+{"sources": ["cache-objects"], "text": "Rank"}
+{"sources": ["cache-objects"], "text": "Ransack"}
+{"sources": ["cache-objects"], "text": "Re-light"}
+{"sources": ["cache-objects"], "text": "Reach"}
+{"sources": ["cache-items", "cache-objects"], "text": "Read"}
+{"sources": ["cache-objects"], "text": "Read (Awakened)"}
+{"sources": ["cache-objects"], "text": "Read (Demonic)"}
+{"sources": ["cache-items"], "text": "Read-tag"}
+{"sources": ["cache-objects"], "text": "Rebalance"}
+{"sources": ["cache-items"], "text": "Recall"}
+{"sources": ["cache-objects"], "text": "Recharge-jewellery"}
+{"sources": ["cache-items"], "text": "Recharge-prayer"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Recharge-whistle"}
+{"sources": ["cache-items"], "text": "Recite-prayer"}
+{"sources": ["cache-npcs"], "text": "Reclaim-items"}
+{"sources": ["cache-items"], "text": "Recoil settings"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Recover-boat"}
+{"sources": ["cache-items"], "text": "Red Rock"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Redecorate"}
+{"sources": ["cache-items", "cache-objects"], "text": "Redeem"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Redeem-code"}
+{"sources": ["cache-objects"], "text": "Refine"}
+{"sources": ["cache-objects"], "text": "Refuel"}
+{"sources": ["cache-items"], "text": "Refund"}
+{"sources": ["cache-objects"], "text": "Reinforce"}
+{"sources": ["cache-objects"], "text": "Reinvigorate"}
+{"sources": ["cache-items", "cache-objects"], "text": "Release"}
+{"sources": ["cache-items"], "text": "Release All"}
+{"sources": ["cache-items"], "text": "Release-all"}
+{"sources": ["cache-objects"], "text": "Release-bees"}
+{"sources": ["cache-objects"], "text": "Release-mote"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Rellekka"}
+{"sources": ["cache-objects"], "text": "Reload"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Relocate"}
+{"sources": ["cache-items", "cache-objects"], "text": "Reminisce"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Remove"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Remove PvP Protection"}
+{"sources": ["cache-objects"], "text": "Remove board advert"}
+{"sources": ["cache-items"], "text": "Remove default"}
+{"sources": ["cache-objects"], "text": "Remove-Bone"}
+{"sources": ["cache-objects"], "text": "Remove-Pot"}
+{"sources": ["cache-objects"], "text": "Remove-banner"}
+{"sources": ["cache-objects"], "text": "Remove-coal"}
+{"sources": ["cache-objects"], "text": "Remove-decorations"}
+{"sources": ["cache-items"], "text": "Remove-eggs"}
+{"sources": ["cache-objects"], "text": "Remove-emblem"}
+{"sources": ["cache-items"], "text": "Remove-legs"}
+{"sources": ["cache-items"], "text": "Remove-lid"}
+{"sources": ["cache-items"], "text": "Remove-one"}
+{"sources": ["cache-objects"], "text": "Remove-outfit"}
+{"sources": ["cache-items"], "text": "Remove-rat"}
+{"sources": ["cache-objects"], "text": "Remove-room"}
+{"sources": ["cache-objects"], "text": "Remove-trophy"}
+{"sources": ["cache-items", "cache-objects"], "text": "Rename Boat"}
+{"sources": ["cache-items"], "text": "Rename boat"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Rename-boat"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Repair"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Repair-boat"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Repairs"}
+{"sources": ["local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Report"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Request-supplies"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Rescue"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Reset"}
+{"sources": ["cache-objects"], "text": "Reset-ammunition"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Reset-room"}
+{"sources": ["cache-objects"], "text": "Reset-time"}
+{"sources": ["cache-objects"], "text": "Reset-wave"}
+{"sources": ["cache-objects"], "text": "Resign"}
+{"sources": ["cache-objects"], "text": "Rest"}
+{"sources": ["cache-items"], "text": "Restore"}
+{"sources": ["cache-items"], "text": "Resupply"}
+{"sources": ["cache-objects"], "text": "Resurface"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Retrieve"}
+{"sources": ["cache-objects"], "text": "Retrieve-egg"}
+{"sources": ["cache-npcs"], "text": "Retrieve-gravestone"}
+{"sources": ["cache-items", "cache-objects"], "text": "Return"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Return-Home"}
+{"sources": ["cache-objects"], "text": "Return-to-Burgh"}
+{"sources": ["cache-objects"], "text": "Return-to-Paterdomus"}
+{"sources": ["cache-items"], "text": "Reverse"}
+{"sources": ["cache-items", "cache-objects"], "text": "Revert"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Rewards"}
+{"sources": ["cache-items", "cache-objects"], "text": "Ride"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Rimmington"}
+{"sources": ["cache-items", "cache-objects"], "text": "Ring"}
+{"sources": ["cache-items"], "text": "Ring of Life"}
+{"sources": ["cache-objects"], "text": "Ring-Zanaris"}
+{"sources": ["cache-objects"], "text": "Ring-bell"}
+{"sources": ["cache-objects"], "text": "Ring-configure"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AIP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AIQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AIR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AIS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AJP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AJQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AJR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AJS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AKP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AKQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AKR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (AKS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (ALP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (ALQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (ALR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (ALS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BIP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BIQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BIR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BIS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BJP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BJQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BJR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BJS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BKP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BKQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BKR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BKS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BLP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BLQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BLR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (BLS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CIP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CIQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CIR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CIS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CJP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CJQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CJR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CJS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CKP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CKQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CKR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CKS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CLP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CLQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CLR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (CLS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DIP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DIQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DIR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DIS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DJP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DJQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DJR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DJS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DKP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DKQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DKR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DKS)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DLP)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DLQ)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DLR)"}
+{"sources": ["cache-objects"], "text": "Ring-last-destination (DLS)"}
+{"sources": ["cache-objects"], "text": "Rod-fish"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Roll"}
+{"sources": ["cache-objects"], "text": "Rotate"}
+{"sources": ["cache-objects"], "text": "Rotate-anticlockwise"}
+{"sources": ["cache-objects"], "text": "Rotate-clockwise"}
+{"sources": ["cache-items"], "text": "Rub"}
+{"sources": ["cache-items"], "text": "Rub-together"}
+{"sources": ["cache-items"], "text": "Rules"}
+{"sources": ["cache-items", "cache-objects"], "text": "Rummage"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Rumour"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Rumour-settings"}
+{"sources": ["cache-objects"], "text": "Rustle"}
+{"sources": ["cache-items", "cache-objects"], "text": "Sabotage"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Sacrifice"}
+{"sources": ["cache-objects"], "text": "Sacrifice-fragments"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Sand"}
+{"sources": ["cache-npcs"], "text": "Sangvesti"}
+{"sources": ["cache-items"], "text": "Save-memory"}
+{"sources": ["cache-objects"], "text": "Say-name"}
+{"sources": ["cache-objects"], "text": "Scale"}
+{"sources": ["cache-items"], "text": "Scan"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Scare"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Scare-away"}
+{"sources": ["cache-items"], "text": "Scatter"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Scoreboard"}
+{"sources": ["cache-items"], "text": "Scramble"}
+{"sources": ["cache-items"], "text": "Scrutinise"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Scry"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Search"}
+{"sources": ["cache-objects"], "text": "Search for traps"}
+{"sources": ["cache-objects"], "text": "Search-for-traps"}
+{"sources": ["cache-objects"], "text": "Seeds"}
+{"sources": ["cache-items", "cache-objects"], "text": "Seers' Village"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Send-parcel"}
+{"sources": ["cache-items"], "text": "Separate"}
+{"sources": ["cache-objects"], "text": "Serve"}
+{"sources": ["cache-objects"], "text": "Set"}
+{"sources": ["cache-objects"], "text": "Set Destination"}
+{"sources": ["cache-objects"], "text": "Set destination"}
+{"sources": ["cache-objects"], "text": "Set up"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Set-difficulty"}
+{"sources": ["cache-items"], "text": "Set-off"}
+{"sources": ["cache-objects"], "text": "Set-trap"}
+{"sources": ["cache-items", "cache-objects"], "text": "Set-up"}
+{"sources": ["cache-npcs", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Sets"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Settings"}
+{"sources": ["cache-items"], "text": "Settings/Destroy"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Setup"}
+{"sources": ["cache-items"], "text": "Setups"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Sew"}
+{"sources": ["cache-items", "cache-objects"], "text": "Shake"}
+{"sources": ["cache-items"], "text": "Shape-Air"}
+{"sources": ["cache-objects"], "text": "Shape-Canoe"}
+{"sources": ["cache-items"], "text": "Shape-Earth"}
+{"sources": ["cache-items"], "text": "Shape-Fire"}
+{"sources": ["cache-items"], "text": "Shape-Mind"}
+{"sources": ["cache-items"], "text": "Shape-Water"}
+{"sources": ["cache-objects"], "text": "Shape-golem"}
+{"sources": ["cache-objects"], "text": "Shared"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Shave"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Shear"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Shoo"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Shoo-away"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Shoot"}
+{"sources": ["cache-objects"], "text": "Shoot-at"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Shop"}
+{"sources": ["cache-objects"], "text": "Shout-over"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Shout-to"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Show-Goal"}
+{"sources": ["cache-objects"], "text": "Shut"}
+{"sources": ["cache-items"], "text": "Signal"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Sing"}
+{"sources": ["cache-objects"], "text": "Sing-crystal"}
+{"sources": ["cache-objects"], "text": "Sit-On"}
+{"sources": ["cache-objects"], "text": "Sit-on"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Skin"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Skull"}
+{"sources": ["cache-objects"], "text": "Slash"}
+{"sources": ["cache-objects"], "text": "Slayer"}
+{"sources": ["cache-items"], "text": "Slayer Master"}
+{"sources": ["cache-items"], "text": "Slayer Tower"}
+{"sources": ["cache-objects"], "text": "Sleep-in"}
+{"sources": ["cache-items"], "text": "Slepe"}
+{"sources": ["cache-items"], "text": "Slice"}
+{"sources": ["cache-objects"], "text": "Slide"}
+{"sources": ["cache-objects"], "text": "Slide-along"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Small Net"}
+{"sources": ["cache-npcs"], "text": "Small net"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Smash"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Smash-ice"}
+{"sources": ["cache-objects"], "text": "Smash-to-bits"}
+{"sources": ["cache-items"], "text": "Smell"}
+{"sources": ["cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Smelt"}
+{"sources": ["cache-objects"], "text": "Smith"}
+{"sources": ["cache-objects"], "text": "Smoke"}
+{"sources": ["cache-items"], "text": "Sniff"}
+{"sources": ["cache-items"], "text": "Snow"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Sober-Up"}
+{"sources": ["cache-objects"], "text": "Solo-start"}
+{"sources": ["cache-objects"], "text": "Sort-salvage"}
+{"sources": ["cache-items", "cache-objects"], "text": "Sound"}
+{"sources": ["cache-items"], "text": "Southern entrance"}
+{"sources": ["cache-items"], "text": "Spawn Item"}
+{"sources": ["cache-npcs"], "text": "Spear"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Spectate"}
+{"sources": ["cache-items"], "text": "Spectator"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Spellbook"}
+{"sources": ["cache-items", "cache-objects"], "text": "Spin"}
+{"sources": ["cache-objects"], "text": "Spin-globe"}
+{"sources": ["cache-items"], "text": "Spirit-tree"}
+{"sources": ["cache-items"], "text": "Split"}
+{"sources": ["cache-items"], "text": "Squash"}
+{"sources": ["cache-items"], "text": "Squeeze"}
+{"sources": ["cache-objects"], "text": "Squeeze-Through"}
+{"sources": ["cache-objects"], "text": "Squeeze-past"}
+{"sources": ["cache-objects"], "text": "Squeeze-through"}
+{"sources": ["cache-items"], "text": "Stamina Boost"}
+{"sources": ["cache-objects"], "text": "Stamp-out"}
+{"sources": ["cache-objects"], "text": "Stand-on"}
+{"sources": ["cache-items", "cache-objects"], "text": "Standard"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Standard Variant"}
+{"sources": ["cache-objects"], "text": "Standard spellbook"}
+{"sources": ["cache-objects"], "text": "Start"}
+{"sources": ["cache-objects"], "text": "Start-golem"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Start-minigame"}
+{"sources": ["cache-npcs"], "text": "Start-practice"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Start-previous-rank"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Start-trial"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Start-wave"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Statistics"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Stats"}
+{"sources": ["cache-objects"], "text": "Status"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Staves"}
+{"sources": ["cache-objects"], "text": "Steal"}
+{"sources": ["cache-objects"], "text": "Steal from"}
+{"sources": ["cache-objects"], "text": "Steal-From"}
+{"sources": ["cache-objects"], "text": "Steal-cowbell"}
+{"sources": ["cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Steal-from"}
+{"sources": ["cache-objects"], "text": "Step-into"}
+{"sources": ["cache-objects"], "text": "Step-off"}
+{"sources": ["cache-objects"], "text": "Step-on"}
+{"sources": ["cache-objects"], "text": "Step-over"}
+{"sources": ["cache-objects"], "text": "Stock-Up"}
+{"sources": ["cache-npcs"], "text": "Stop"}
+{"sources": ["cache-objects"], "text": "Stop-navigating"}
+{"sources": ["cache-npcs"], "text": "Stop-practice"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Storage"}
+{"sources": ["cache-objects"], "text": "Store"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Store-axe"}
+{"sources": ["cache-objects"], "text": "Store-plunder"}
+{"sources": ["cache-objects"], "text": "Store-preform"}
+{"sources": ["cache-objects"], "text": "Story"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Strike"}
+{"sources": ["cache-items"], "text": "Strings"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Stroke"}
+{"sources": ["cache-items"], "text": "Stronghold"}
+{"sources": ["cache-items", "cache-objects"], "text": "Study"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Stun"}
+{"sources": ["cache-objects"], "text": "Suck"}
+{"sources": ["cache-objects"], "text": "Summon"}
+{"sources": ["cache-items"], "text": "Summon Lil Kal"}
+{"sources": ["cache-items"], "text": "Summon Lil Wisp"}
+{"sources": ["cache-items"], "text": "Summon Lil Zuk"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Supply"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Swap"}
+{"sources": ["cache-objects"], "text": "Swap-options"}
+{"sources": ["cache-objects"], "text": "Swim"}
+{"sources": ["cache-objects"], "text": "Swim to"}
+{"sources": ["cache-objects"], "text": "Swim-to"}
+{"sources": ["cache-items", "cache-objects"], "text": "Swing"}
+{"sources": ["cache-objects"], "text": "Swing Across"}
+{"sources": ["cache-objects"], "text": "Swing across"}
+{"sources": ["cache-objects"], "text": "Swing-across"}
+{"sources": ["cache-objects"], "text": "Swing-from"}
+{"sources": ["cache-objects"], "text": "Swing-on"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Tackle"}
+{"sources": ["cache-objects"], "text": "Tag"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Take"}
+{"sources": ["cache-objects"], "text": "Take From"}
+{"sources": ["cache-objects"], "text": "Take Rake"}
+{"sources": ["cache-objects"], "text": "Take Seed Dibber"}
+{"sources": ["cache-objects"], "text": "Take Spade"}
+{"sources": ["cache-objects"], "text": "Take anglerfish"}
+{"sources": ["cache-objects"], "text": "Take down"}
+{"sources": ["cache-items"], "text": "Take fish"}
+{"sources": ["cache-objects"], "text": "Take manta ray"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Take pages"}
+{"sources": ["cache-objects"], "text": "Take tools"}
+{"sources": ["cache-objects"], "text": "Take treasure"}
+{"sources": ["cache-objects"], "text": "Take-1"}
+{"sources": ["cache-objects"], "text": "Take-10"}
+{"sources": ["cache-objects"], "text": "Take-10 concoctions"}
+{"sources": ["cache-objects"], "text": "Take-5"}
+{"sources": ["cache-objects"], "text": "Take-5 concoctions"}
+{"sources": ["cache-objects"], "text": "Take-Arrows"}
+{"sources": ["cache-objects"], "text": "Take-Beam"}
+{"sources": ["cache-objects"], "text": "Take-Coffin"}
+{"sources": ["cache-objects"], "text": "Take-Crackers"}
+{"sources": ["cache-objects"], "text": "Take-Log"}
+{"sources": ["cache-objects"], "text": "Take-Meat"}
+{"sources": ["cache-objects"], "text": "Take-Pulley-Beam"}
+{"sources": ["cache-objects"], "text": "Take-Rope"}
+{"sources": ["cache-objects"], "text": "Take-Rum"}
+{"sources": ["cache-objects"], "text": "Take-Runes"}
+{"sources": ["cache-objects"], "text": "Take-Tofu"}
+{"sources": ["cache-objects"], "text": "Take-Tool"}
+{"sources": ["cache-objects"], "text": "Take-Vial"}
+{"sources": ["cache-objects"], "text": "Take-Worms"}
+{"sources": ["cache-objects"], "text": "Take-X"}
+{"sources": ["cache-items"], "text": "Take-all"}
+{"sources": ["cache-objects"], "text": "Take-any-cargo"}
+{"sources": ["cache-objects"], "text": "Take-axe"}
+{"sources": ["cache-objects"], "text": "Take-beer"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Take-boat"}
+{"sources": ["cache-objects"], "text": "Take-bowl"}
+{"sources": ["cache-objects"], "text": "Take-candy"}
+{"sources": ["cache-objects"], "text": "Take-cargo"}
+{"sources": ["cache-objects"], "text": "Take-chisel"}
+{"sources": ["cache-objects"], "text": "Take-concoction"}
+{"sources": ["cache-objects"], "text": "Take-cutting"}
+{"sources": ["cache-npcs"], "text": "Take-eggs"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Take-flyer"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Take-from"}
+{"sources": ["cache-objects"], "text": "Take-from <col=00ffff>Fishing"}
+{"sources": ["cache-objects"], "text": "Take-from <col=00ffff>Herblore"}
+{"sources": ["cache-objects"], "text": "Take-from <col=00ffff>Hunting"}
+{"sources": ["cache-items"], "text": "Take-grubs"}
+{"sources": ["cache-objects"], "text": "Take-hammer"}
+{"sources": ["cache-objects"], "text": "Take-kettle"}
+{"sources": ["cache-objects"], "text": "Take-knife"}
+{"sources": ["cache-objects"], "text": "Take-last-cargo"}
+{"sources": ["cache-objects"], "text": "Take-log"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Take-lure"}
+{"sources": ["cache-npcs", "cache-objects"], "text": "Take-many"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Take-net"}
+{"sources": ["cache-items"], "text": "Take-one"}
+{"sources": ["cache-objects"], "text": "Take-pickaxe"}
+{"sources": ["cache-objects"], "text": "Take-powder"}
+{"sources": ["cache-objects"], "text": "Take-preform"}
+{"sources": ["cache-items"], "text": "Take-reading"}
+{"sources": ["cache-objects"], "text": "Take-remains"}
+{"sources": ["cache-objects"], "text": "Take-rock"}
+{"sources": ["cache-objects"], "text": "Take-seed"}
+{"sources": ["cache-objects"], "text": "Take-sigil"}
+{"sources": ["cache-objects"], "text": "Take-supplies"}
+{"sources": ["cache-objects"], "text": "Take-tinderbox"}
+{"sources": ["cache-objects"], "text": "Take-uniform"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Tal Teklan"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Talk"}
+{"sources": ["cache-objects"], "text": "Talk to"}
+{"sources": ["cache-items"], "text": "Talk-At"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Talk-To"}
+{"sources": ["cache-objects"], "text": "Talk-into"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Talk-to"}
+{"sources": ["cache-objects"], "text": "Tamper"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Tan-hides"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Tap"}
+{"sources": ["cache-items"], "text": "Tarn's Lair"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Task"}
+{"sources": ["cache-items"], "text": "Taverley"}
+{"sources": ["cache-items", "cache-objects"], "text": "Tears of Guthix"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Tease"}
+{"sources": ["cache-objects"], "text": "Teeth-grip"}
+{"sources": ["cache-items"], "text": "Tele"}
+{"sources": ["cache-items"], "text": "Tele to POH"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "npc-actions"], "text": "Teleport"}
+{"sources": ["cache-items"], "text": "Teleport Boat (Pandemonium)"}
+{"sources": ["cache-objects"], "text": "Teleport Menu"}
+{"sources": ["cache-items"], "text": "Teleport boat to the Pandemonium"}
+{"sources": ["cache-objects"], "text": "Teleport menu"}
+{"sources": ["cache-objects"], "text": "Teleport to Destination"}
+{"sources": ["cache-items"], "text": "Teleport to a boat"}
+{"sources": ["cache-items"], "text": "Teleport to a boat (last one)"}
+{"sources": ["cache-objects"], "text": "Teleport to destination"}
+{"sources": ["cache-items"], "text": "Teleport to the Pandemonium"}
+{"sources": ["cache-items"], "text": "Teleport-back"}
+{"sources": ["cache-items"], "text": "Teleport-to-clue"}
+{"sources": ["cache-items"], "text": "Teleports"}
+{"sources": ["cache-items"], "text": "Tell-accurate"}
+{"sources": ["cache-items"], "text": "Tell-aggressive"}
+{"sources": ["cache-items"], "text": "Tell-blue"}
+{"sources": ["cache-items"], "text": "Tell-controlled"}
+{"sources": ["cache-items"], "text": "Tell-crackers"}
+{"sources": ["cache-items"], "text": "Tell-defensive"}
+{"sources": ["cache-items"], "text": "Tell-green"}
+{"sources": ["cache-items"], "text": "Tell-meat"}
+{"sources": ["cache-items"], "text": "Tell-red"}
+{"sources": ["cache-items"], "text": "Tell-tofu"}
+{"sources": ["cache-items"], "text": "Tell-worms"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Tend-to"}
+{"sources": ["cache-objects"], "text": "Tether"}
+{"sources": ["cache-items"], "text": "The Ancient Vault"}
+{"sources": ["cache-items"], "text": "The Fisher's Flute"}
+{"sources": ["cache-items"], "text": "The Outpost"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "The Pandemonium"}
+{"sources": ["cache-items"], "text": "The Scar"}
+{"sources": ["cache-items"], "text": "The Stranglewood"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Threaten"}
+{"sources": ["cache-items", "cache-objects"], "text": "Throw"}
+{"sources": ["cache-objects"], "text": "Throw-at"}
+{"sources": ["cache-items"], "text": "Throw-water"}
+{"sources": ["cache-items"], "text": "Throw-water direction"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Tickets"}
+{"sources": ["cache-objects"], "text": "Tie-rope"}
+{"sources": ["cache-items"], "text": "Tirannwn"}
+{"sources": ["cache-items", "cache-objects"], "text": "Toggle"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Toggle Counter"}
+{"sources": ["cache-items"], "text": "Toggle Effect"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Toggle Fossils"}
+{"sources": ["cache-objects"], "text": "Toggle K/D"}
+{"sources": ["cache-items"], "text": "Toggle Respawn"}
+{"sources": ["cache-objects"], "text": "Toggle XP"}
+{"sources": ["cache-npcs"], "text": "Toggle movement"}
+{"sources": ["cache-npcs"], "text": "Toggle prayers"}
+{"sources": ["cache-objects"], "text": "Toggle warning"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Toggle warnings"}
+{"sources": ["cache-items"], "text": "Toggle-Freeze"}
+{"sources": ["cache-items"], "text": "Toggle-absorption"}
+{"sources": ["cache-items"], "text": "Toggle-activity"}
+{"sources": ["cache-items"], "text": "Toggle-colour"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Toggle-minerals"}
+{"sources": ["cache-items"], "text": "Toggle-respawn"}
+{"sources": ["cache-objects"], "text": "Toggle-talisman"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Toggle-vials"}
+{"sources": ["cache-items"], "text": "Toggle-view"}
+{"sources": ["cache-objects"], "text": "Toggle-warning"}
+{"sources": ["cache-items"], "text": "Tool-leprechauns"}
+{"sources": ["cache-objects"], "text": "Top-Floor"}
+{"sources": ["cache-objects"], "text": "Top-floor"}
+{"sources": ["cache-items", "cache-objects"], "text": "Touch"}
+{"sources": ["cache-items"], "text": "Track-current"}
+{"sources": ["cache-npcs", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Trade"}
+{"sources": ["local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Trade with"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Trade-Builders-Store"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Trade-Co-op"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Trade-Drinks"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Trade-General-Store"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Trade-in"}
+{"sources": ["cache-npcs"], "text": "Trade-teeth"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Trade-with"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Training"}
+{"sources": ["cache-items"], "text": "Transform"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Translate"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Transport"}
+{"sources": ["cache-objects"], "text": "Trap"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Travel"}
+{"sources": ["cache-objects"], "text": "Travel to platform"}
+{"sources": ["cache-objects"], "text": "Travel-End"}
+{"sources": ["cache-objects"], "text": "Travel-Start"}
+{"sources": ["cache-objects"], "text": "Tread-softly"}
+{"sources": ["cache-objects"], "text": "Tree"}
+{"sources": ["cache-objects"], "text": "Tree Gnome Village"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Trick-or-treat"}
+{"sources": ["cache-items", "cache-objects"], "text": "Trim"}
+{"sources": ["cache-items"], "text": "Troll Stronghold"}
+{"sources": ["cache-items"], "text": "Troll Stronghold entrance"}
+{"sources": ["cache-items"], "text": "Troll Stronghold roof"}
+{"sources": ["cache-items"], "text": "Trollheim"}
+{"sources": ["cache-objects"], "text": "Trophies"}
+{"sources": ["cache-objects"], "text": "Turn"}
+{"sources": ["cache-objects"], "text": "Turn-Off"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Tutorial"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Tuxedo-time"}
+{"sources": ["cache-items"], "text": "Twiggy O'Korn"}
+{"sources": ["cache-items"], "text": "Twilight Temple"}
+{"sources": ["cache-items"], "text": "Un-note-Quantity"}
+{"sources": ["cache-objects"], "text": "Un-set"}
+{"sources": ["cache-items"], "text": "Unattune"}
+{"sources": ["cache-objects"], "text": "Unblock"}
+{"sources": ["cache-items"], "text": "Unbottle-boat"}
+{"sources": ["cache-items", "cache-objects"], "text": "Uncharge"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Ungael"}
+{"sources": ["cache-items"], "text": "Unimbue"}
+{"sources": ["cache-items", "cache-objects"], "text": "Unload"}
+{"sources": ["cache-items", "cache-objects"], "text": "Unlock"}
+{"sources": ["cache-items"], "text": "Unlocks"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Unmark"}
+{"sources": ["cache-items"], "text": "Unpack"}
+{"sources": ["cache-items"], "text": "Unstuff"}
+{"sources": ["cache-items"], "text": "Untangle"}
+{"sources": ["cache-objects"], "text": "Untether"}
+{"sources": ["cache-objects"], "text": "Untie"}
+{"sources": ["cache-items"], "text": "Untrim"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Upgrade"}
+{"sources": ["cache-items", "cache-npcs", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Use"}
+{"sources": ["cache-objects"], "text": "Use-Driftwood"}
+{"sources": ["cache-objects"], "text": "Use-Lift"}
+{"sources": ["cache-objects"], "text": "Use-Logs"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Use-rod"}
+{"sources": ["cache-items", "cache-npcs", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Value"}
+{"sources": ["cache-items"], "text": "Varlamore"}
+{"sources": ["cache-items", "cache-objects"], "text": "Varrock"}
+{"sources": ["cache-objects"], "text": "Vault"}
+{"sources": ["cache-objects"], "text": "Venerate"}
+{"sources": ["cache-objects"], "text": "Vent"}
+{"sources": ["cache-items"], "text": "Ver Sinhaza"}
+{"sources": ["cache-items", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "View"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "View Laps"}
+{"sources": ["cache-objects"], "text": "View Stats"}
+{"sources": ["cache-items"], "text": "View-charts"}
+{"sources": ["cache-objects"], "text": "View-game"}
+{"sources": ["cache-objects"], "text": "View-glory"}
+{"sources": ["cache-objects"], "text": "View-stats"}
+{"sources": ["cache-items"], "text": "View-tasks"}
+{"sources": ["cache-objects"], "text": "View-trophies"}
+{"sources": ["cache-objects"], "text": "Visit-Last"}
+{"sources": ["cache-objects"], "text": "Visual-effects"}
+{"sources": ["cache-npcs"], "text": "Wake"}
+{"sources": ["cache-items"], "text": "Wake-ghost"}
+{"sources": ["cache-items"], "text": "Walk"}
+{"sources": ["cache-npcs", "local:dk/dk_menu", "local:exampleFiles/example_menu", "npc-actions"], "text": "Walk here"}
+{"sources": ["cache-objects"], "text": "Walk on"}
+{"sources": ["cache-objects"], "text": "Walk through"}
+{"sources": ["cache-objects"], "text": "Walk-across"}
+{"sources": ["cache-objects"], "text": "Walk-along"}
+{"sources": ["cache-objects"], "text": "Walk-down"}
+{"sources": ["cache-objects"], "text": "Walk-on"}
+{"sources": ["cache-objects"], "text": "Walk-over"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Walk-past"}
+{"sources": ["cache-objects"], "text": "Walk-through"}
+{"sources": ["cache-objects"], "text": "Walk-to"}
+{"sources": ["cache-objects"], "text": "Walk-up"}
+{"sources": ["cache-objects"], "text": "Warm-by"}
+{"sources": ["cache-items"], "text": "Warrior's Guild"}
+{"sources": ["cache-items", "cache-objects"], "text": "Warriors' Guild"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Watch"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Watch-shouting"}
+{"sources": ["cache-items", "cache-objects"], "text": "Watchtower"}
+{"sources": ["cache-npcs", "cache-objects", "npc-actions"], "text": "Water"}
+{"sources": ["cache-items"], "text": "Water Altar"}
+{"sources": ["cache-items", "cache-npcs", "npc-actions"], "text": "Waterbirth Island"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Watermill"}
+{"sources": ["cache-objects"], "text": "Waterproof"}
+{"sources": ["cache-items", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Wear"}
+{"sources": ["cache-objects"], "text": "Weave"}
+{"sources": ["cache-objects"], "text": "Weed"}
+{"sources": ["cache-items", "cache-objects"], "text": "Weiss"}
+{"sources": ["cache-items"], "text": "Western Provinces"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "Whack"}
+{"sources": ["cache-items", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Wield"}
+{"sources": ["cache-items"], "text": "Wilderness"}
+{"sources": ["cache-items", "cache-objects"], "text": "Wind"}
+{"sources": ["cache-objects"], "text": "Wind-up"}
+{"sources": ["cache-items", "cache-objects"], "text": "Wintertodt Camp"}
+{"sources": ["cache-items"], "text": "Wipe"}
+{"sources": ["cache-items", "cache-objects", "local:dk/dk_menu", "local:exampleFiles/example_menu"], "text": "Withdraw"}
+{"sources": ["cache-items"], "text": "Withdraw 1"}
+{"sources": ["cache-items"], "text": "Withdraw All"}
+{"sources": ["cache-items"], "text": "Wizards' Tower"}
+{"sources": ["cache-items", "cache-objects"], "text": "Woodcutting Guild"}
+{"sources": ["cache-objects"], "text": "Work"}
+{"sources": ["cache-objects"], "text": "Work-at"}
+{"sources": ["cache-objects"], "text": "Worship"}
+{"sources": ["cache-npcs"], "text": "Wrangle"}
+{"sources": ["cache-items"], "text": "Write-Role"}
+{"sources": ["cache-items"], "text": "Wyrmscraig"}
+{"sources": ["cache-items"], "text": "Wyrmscraig Cavern"}
+{"sources": ["cache-items"], "text": "Xeric's Glade"}
+{"sources": ["cache-items"], "text": "Xeric's Heart"}
+{"sources": ["cache-items"], "text": "Xeric's Honour"}
+{"sources": ["cache-items"], "text": "Xeric's Inferno"}
+{"sources": ["cache-items"], "text": "Xeric's Lookout"}
+{"sources": ["cache-items", "cache-objects"], "text": "Yanille"}
+{"sources": ["cache-objects"], "text": "Your house"}
+{"sources": ["cache-objects"], "text": "Zanaris"}
+{"sources": ["cache-npcs", "npc-actions"], "text": "talk"}
+{"sources": ["cache-objects"], "text": "test"}

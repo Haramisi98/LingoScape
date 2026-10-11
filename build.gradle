@@ -3,7 +3,6 @@ plugins {
 }
 
 repositories {
-	mavenLocal()
 	maven {
 		url = 'https://repo.runelite.net'
 		content {
@@ -13,7 +12,9 @@ repositories {
 	mavenCentral()
 }
 
-def runeLiteVersion = 'latest.release'
+// Override with -PruneLiteVersion=<version> when testing a newer RuneLite release.
+def runeLiteVersion = providers.gradleProperty('runeLiteVersion').getOrElse('1.13.1')
+def pluginMainClass = 'com.haramisi98.LingoScape.LingoScapeLauncher'
 
 dependencies {
 	compileOnly group: 'net.runelite', name:'client', version: runeLiteVersion
@@ -33,6 +34,7 @@ tasks.test {
 }
 
 group = 'com'
+apply from: 'gradle/translations.gradle'
 version = '1.0-SNAPSHOT'
 
 tasks.withType(JavaCompile).configureEach {
@@ -40,10 +42,19 @@ tasks.withType(JavaCompile).configureEach {
 	options.release.set(11)
 }
 
+tasks.register('run', JavaExec) {
+	group = 'application'
+	description = 'Launch RuneLite with LingoScape available as a development plugin.'
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = pluginMainClass
+	jvmArgs '-ea'
+	args '--developer-mode', '--debug'
+}
+
 tasks.register('shadowJar', Jar) {
 	dependsOn configurations.testRuntimeClasspath
 	manifest {
-		attributes('Main-Class': 'com', 'Multi-Release': true)
+		attributes('Main-Class': pluginMainClass, 'Multi-Release': true)
 	}
 
 	duplicatesStrategy = DuplicatesStrategy.EXCLUDE

@@ -1,0 +1,37 @@
+{
+  "categories": {
+    "dialogue": 112973,
+    "examine": 11702,
+    "interface": 7754,
+    "item": 14485,
+    "menu": 1718,
+    "npc": 8683,
+    "object": 9279,
+    "prayer": 29,
+    "prayer_description": 29,
+    "quest": 213,
+    "skill": 23
+  },
+  "existing_unique_by_category": {
+    "dialogue": 50493,
+    "item": 8147,
+    "menu": 55,
+    "npc": 3811,
+    "object": 3993
+  },
+  "new_by_category": {
+    "dialogue": 62480,
+    "examine": 11702,
+    "interface": 7754,
+    "item": 6338,
+    "menu": 1663,
+    "npc": 4872,
+    "object": 5286,
+    "prayer": 29,
+    "prayer_description": 29,
+    "quest": 213,
+    "skill": 23
+  },
+  "total_category_text_pairs": 166888,
+  "unique_texts_across_categories": 160809
+}

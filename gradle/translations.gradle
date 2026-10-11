@@ -1,0 +1,171 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+import java.security.MessageDigest
+
+def fingerprint = { row ->
+    MessageDigest.getInstance('SHA-256').digest(JsonOutput.toJson(
+        [row.id, row.category, row.english, row.translation]).getBytes('UTF-8')).encodeHex().toString()
+}
+
+// Authoring records are validated before compact runtime maps are generated.
+def categories = ['menu', 'item', 'npc', 'object', 'dialogue']
+def tokens = { String text, String pattern ->
+    (text =~ pattern).collect { it instanceof List ? it[0] : it }.countBy { it }
+}
+def validate = { records ->
+    if (!(records instanceof List)) throw new GradleException('Translations must be a JSON array')
+    def ids = [] as Set
+    def keys = [] as Set
+    records.each { row ->
+        if (!(row instanceof Map) || !row.keySet().containsAll(['id', 'category', 'english', 'translation', 'status']) ||
+            !(row.keySet() - ['id', 'category', 'english', 'translation', 'status', 'reviewHash', 'reviewer']).isEmpty())
+            throw new GradleException('Each translation requires id, category, english, translation, status')
+        ['id', 'category', 'english', 'translation', 'status'].each { field ->
+            if (!(row[field] instanceof String) || row[field].isBlank())
+                throw new GradleException("Blank or invalid ${field}: ${row.id}")
+        }
+        if (!(row.id ==~ /[a-z][a-z0-9_.-]*/) || !ids.add(row.id))
+            throw new GradleException("Invalid or duplicate id: ${row.id}")
+        if (!categories.contains(row.category) || !['draft', 'reviewed'].contains(row.status))
+            throw new GradleException("Invalid category or status: ${row.id}")
+        if (row.status == 'reviewed' && (row.reviewHash != fingerprint(row) ||
+            !(row.reviewer instanceof String) || row.reviewer.isBlank()))
+            throw new GradleException("Missing/stale review: ${row.id}. Revert to draft or review the changed text.")
+        if (row.translation.trim() == 'translationMissing')
+            throw new GradleException("Placeholder translation: ${row.id}")
+        if (!keys.add([row.category, row.english]))
+            throw new GradleException("Duplicate lookup key: ${row.id}")
+        if (row.category in ['npc', 'object'] && row.english != row.english.toUpperCase(Locale.ROOT))
+            throw new GradleException("NPC/object lookup keys must be uppercase: ${row.id}")
+        if (tokens(row.english, /\{\d+\}|\[[^\]\r\n]+\]/) != tokens(row.translation, /\{\d+\}|\[[^\]\r\n]+\]/))
+            throw new GradleException("Placeholder mismatch: ${row.id}")
+        if (tokens(row.english, /<[^>]+>/) != tokens(row.translation, /<[^>]+>/))
+            throw new GradleException("Formatting tag mismatch: ${row.id}")
+    }
+}
+
+def generated = layout.buildDirectory.dir('generated/translations')
+def registerGeneration = { String taskName, String directory, boolean release ->
+tasks.register(taskName) {
+    inputs.dir(layout.projectDirectory.dir('translations'))
+    def output = layout.buildDirectory.dir(directory)
+    outputs.dir(output)
+    doLast {
+        def documents = fileTree('translations').matching { include '*/*.json' }.files.sort()
+        def languages = documents.groupBy { it.parentFile.name }
+        def parsed = languages.collectEntries { language, files ->
+            if (!(language ==~ /[a-z]{2}/)) throw new GradleException("Invalid language: ${language}")
+            def rows = files.collectMany { file ->
+                def data = new JsonSlurper().parse(file, 'UTF-8')
+                validate(data)
+                data
+            }
+            validate(rows) // Also reject duplicates spanning multiple files.
+            [(language): rows]
+        }
+        delete(output)
+        parsed.each { language, rows ->
+            categories.each { category ->
+                def dictionary = rows.findAll { it.category == category && (!release || it.status == 'reviewed') }.collectEntries { [(it.english): it.translation] }
+                def target = output.get().file("translations/${language}/${category}.json").asFile
+                target.parentFile.mkdirs()
+                target.setText(JsonOutput.toJson(dictionary), 'UTF-8')
+            }
+        }
+    }
+}
+}
+registerGeneration('generateTranslations', 'generated/translations', false)
+registerGeneration('generateReleaseTranslations', 'generated/releaseTranslations', true)
+
+tasks.register('releaseJar', Jar) {
+    group = 'build'
+    description = 'Package plugin classes and reviewed translations only (not a standalone client).'
+    dependsOn tasks.named('classes'), tasks.named('generateReleaseTranslations'), tasks.named('check')
+    from(sourceSets.main.output.classesDirs)
+    from(layout.buildDirectory.dir('generated/releaseTranslations'))
+    archiveClassifier = 'release'
+}
+
+tasks.register('markTranslationReviewed') {
+    description = 'Record a human review: -PtranslationId=menu.use -Previewer=your-name -Planguage=dk'
+    doLast {
+        def id = providers.gradleProperty('translationId').get()
+        def reviewer = providers.gradleProperty('reviewer').get()
+        def language = providers.gradleProperty('language').getOrElse('dk')
+        if (!(language ==~ /[a-z]{2}/) || reviewer.isBlank()) throw new GradleException('Invalid language/reviewer')
+        def matches = []
+        fileTree("translations/${language}").matching { include '*.json' }.files.each { file ->
+            def rows = new JsonSlurper().parse(file, 'UTF-8')
+            rows.each { row -> if (row.id == id) matches.add([file, rows, row]) }
+        }
+        if (matches.size() != 1) throw new GradleException('Expected exactly one matching translation')
+        def (file, rows, row) = matches[0]
+        row.status = 'reviewed'
+        row.reviewer = reviewer
+        row.reviewHash = fingerprint(row)
+        validate(rows)
+        file.setText(JsonOutput.prettyPrint(JsonOutput.toJson(rows)) + '\n', 'UTF-8')
+    }
+}
+sourceSets.main.resources.srcDir(generated)
+def knownIndex = layout.buildDirectory.dir('generated/knownIndex')
+tasks.register('generateKnownTextIndex') {
+    inputs.files(categories.collect { file("data/english/${it}.jsonl") })
+    outputs.dir(knownIndex)
+    doLast {
+        def hashes = new TreeSet<String>()
+        categories.each { category ->
+            file("data/english/${category}.jsonl").eachLine('UTF-8') { line ->
+                def text = new JsonSlurper().parseText(line).text
+                def normalized = text.replace('<br>', ' ').replaceAll(/<[^>]*>/, '').replaceAll(/\s+/, ' ').trim().toLowerCase(Locale.ROOT)
+                hashes.add(MessageDigest.getInstance('SHA-256').digest((category + '\n' + normalized).getBytes('UTF-8')).encodeHex().toString().substring(0, 32))
+            }
+        }
+        def target = knownIndex.get().file('translations/known-text.bin').asFile
+        target.parentFile.mkdirs()
+        target.withOutputStream { stream -> hashes.each { stream.write(it.decodeHex()) } }
+    }
+}
+sourceSets.main.resources.srcDir(knownIndex)
+tasks.named('releaseJar') { from(knownIndex); dependsOn tasks.named('generateKnownTextIndex') }
+// Retain legacy data for collection/history, but do not ship or read it at runtime.
+tasks.named('processResources') {
+    dependsOn tasks.named('generateTranslations')
+    dependsOn tasks.named('generateKnownTextIndex')
+    exclude 'net/runelite/client/plugins/lingoScape/**'
+}
+
+tasks.register('testTranslationValidation') {
+    doLast {
+        def valid = [id: 'menu.test', category: 'menu', english: '<col=ff0000>Use {0}</col>',
+                     translation: '<col=ff0000>Brug {0}</col>', status: 'draft']
+        validate([valid])
+        def reviewed = [id: 'dialogue.test', category: 'dialogue', english: 'Hello\n"friend" ~|~',
+                   translation: 'Hej\n"ven" ~|~', status: 'reviewed', reviewer: 'fixture']
+        reviewed.reviewHash = fingerprint(reviewed)
+        validate([reviewed])
+        def invalid = [
+            [valid, valid],
+            [valid, valid + [id: 'menu.other']],
+            [valid + [translation: '']],
+            [valid + [translation: 'translationMissing']],
+            [valid + [translation: '<col=ff0000>Brug {1}</col>']],
+            [valid + [translation: 'Brug {0}']],
+            [valid + [status: 'unknown']],
+            [valid + [category: 'unknown']],
+            [valid + [category: 'npc']],
+            [valid + [extra: true]],
+            [reviewed + [translation: 'Changed']],
+            [reviewed + [english: 'Changed']],
+            [valid + [status: 'reviewed']],
+        ]
+        invalid.eachWithIndex { rows, index ->
+            boolean rejected = false
+            try { validate(rows) } catch (GradleException expected) { rejected = true }
+            if (!rejected) throw new GradleException("Invalid fixture ${index} was accepted")
+        }
+        logger.lifecycle('Translation validation: 2 valid and 13 invalid fixtures passed')
+    }
+}
+tasks.named('check') { dependsOn tasks.named('testTranslationValidation') }

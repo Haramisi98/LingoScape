@@ -1,6 +1,11 @@
 package com.haramisi98.LingoScape;
 
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonToken;
+import java.util.function.BiConsumer;
+
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -9,6 +14,18 @@ import java.util.regex.Pattern;
 public class TranslationManager {
     public final Map<TranslationType, Map<String, String>> translations = new EnumMap<>(TranslationType.class);
     private String currentLanguage;
+    private BiConsumer<TranslationType, String> missing = (type, text) -> {};
+    private static final Pattern NUMBERS = Pattern.compile("\\d+");
+    private static final Pattern PLACEHOLDERS = Pattern.compile("\\{(\\d+)}");
+    private static final Pattern FORMATTED = Pattern.compile("(<col=[^>]+>)?(.*?)(\\s\\(Members\\))?(</col>)?", Pattern.CASE_INSENSITIVE);
+    private final Map<TranslationType, Set<String>> normalizedKeys = new EnumMap<>(TranslationType.class);
+    private final Map<TranslationType, Set<String>> translatedValues = new EnumMap<>(TranslationType.class);
+
+    public void onMissing(BiConsumer<TranslationType, String> listener) { missing = listener; }
+    public String getLanguage() { return currentLanguage; }
+    public boolean resemblesTranslatedKey(TranslationType type, String text) {
+        return normalizedKeys.getOrDefault(type, Collections.emptySet()).contains(KnownTextIndex.normalize(text));
+    }
 
     public TranslationManager(String initialLanguage) {
         setLanguage(initialLanguage);
@@ -22,36 +39,64 @@ public class TranslationManager {
     }
 
     public void loadTranslations(String languageCode) {
-        String basePath = "/net/runelite/client/plugins/lingoScape/" + languageCode + "/";
+        normalizedKeys.clear();
+        translatedValues.clear();
+        if ("en".equals(languageCode)) {
+            translations.clear(); // English is the original game text; no dictionary is required.
+            return;
+        }
+        String basePath = "/translations/" + languageCode + "/";
 
         for (TranslationType type : TranslationType.values()) {
-            String fileName = languageCode + "_" + type.name().toLowerCase() + ".csv";
-            translations.put(type, loadTranslationFile(basePath + fileName));
+            String fileName = type.name().toLowerCase(Locale.ROOT) + ".json";
+            Map<String, String> dictionary = loadTranslationFile(basePath + fileName);
+            translations.put(type, dictionary);
+            Set<String> keys = new HashSet<>();
+            dictionary.keySet().forEach(key -> keys.add(KnownTextIndex.normalize(key)));
+            normalizedKeys.put(type, keys);
+            translatedValues.put(type, new HashSet<>(dictionary.values()));
         }
     }
 
     public Map<String, String> loadTranslationFile(String path) {
         Map<String, String> translationMap = new HashMap<>();
 
-        try (InputStream input = getClass().getResourceAsStream(path);
-             BufferedReader reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(input)))) {
-
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split("~\\|~", -1);
-                if (parts.length >= 2) {
-                    translationMap.put(parts[0], parts[1]);
-                }
+        try (InputStream input = getClass().getResourceAsStream(path)) {
+            if (input == null) {
+                return translationMap;
             }
-        } catch (IOException | NullPointerException e) {
+            try (Reader reader = new InputStreamReader(input, StandardCharsets.UTF_8)) {
+                return readDictionary(reader);
+            }
+        } catch (IOException | com.google.gson.JsonParseException e) {
             Logger.getLogger(TranslationManager.class.getName())
-                    .warning("Failed to load resource file: " + path);
+                    .warning("Failed to load translation file: " + path);
         }
         return translationMap;
     }
 
+    static Map<String, String> readDictionary(Reader reader) throws IOException {
+        Map<String, String> result = new HashMap<>();
+        JsonReader json = new JsonReader(reader);
+        json.beginObject();
+        while (json.hasNext()) {
+            String key = json.nextName();
+            if (json.peek() == JsonToken.NULL) { json.nextNull(); continue; }
+            String value = json.nextString();
+            if (!value.isBlank() && !"translationMissing".equals(value.trim())) result.put(key, value);
+        }
+        json.endObject();
+        return result;
+    }
+
     public String translateTextType(TranslationType type, String text) {
-        return translations.getOrDefault(type, Collections.emptyMap()).getOrDefault(text, text);
+        String translated = translations.getOrDefault(type, Collections.emptyMap()).get(text);
+        if (translated == null || translated.isBlank() || "translationMissing".equals(translated.trim())) {
+            if (text != null && !"en".equals(currentLanguage) &&
+                    !translatedValues.getOrDefault(type, Collections.emptySet()).contains(text)) missing.accept(type, text);
+            return text;
+        }
+        return translated;
     }
 
     public String getTranslationFromUnfilteredText(TranslationType type, String text) {
@@ -66,7 +111,7 @@ public class TranslationManager {
         String suffix = Optional.ofNullable(matcher.group(3)).orElse("");
         boolean hasClosingTag = matcher.group(4) != null;
 
-        List<String> numbers = extractNumbers(mainText);
+        List<String> numbers = new ArrayList<>();
         String processedText = replaceNumbersWithPlaceholders(mainText, numbers);
         processedText = preprocessText(type, processedText);
         String translated = translateTextType(type, processedText);
@@ -83,27 +128,12 @@ public class TranslationManager {
 
     private String preprocessText(TranslationType type, String text) {
         return (type == TranslationType.NPC || type == TranslationType.OBJECT)
-                ? text.toUpperCase()
+                ? text.toUpperCase(Locale.ROOT)
                 : text;
     }
 
     private Matcher createMatcher(String text) {
-        Pattern pattern = Pattern.compile(
-                "(<col=[^>]+>)?(.*?)(\\s\\(Members\\))?(</col>)?",
-                Pattern.CASE_INSENSITIVE
-        );
-        return pattern.matcher(text);
-    }
-
-    private List<String> extractNumbers(String text) {
-        List<String> numbers = new ArrayList<>();
-        Pattern numberPattern = Pattern.compile("\\d+");
-        Matcher numberMatcher = numberPattern.matcher(text);
-
-        while (numberMatcher.find()) {
-            numbers.add(numberMatcher.group());
-        }
-        return numbers;
+        return FORMATTED.matcher(text);
     }
 
     private String buildFinalText(String colorTag, String translatedText, String suffix, boolean hasClosingTag) {
@@ -112,7 +142,7 @@ public class TranslationManager {
 
 
     public String replaceNumbersWithPlaceholders(String text, List<String> numbers) {
-        Matcher numberMatcher = Pattern.compile("\\d+").matcher(text);
+        Matcher numberMatcher = NUMBERS.matcher(text);
         StringBuffer buffer = new StringBuffer();
         int placeholderIndex = 0;
 
@@ -125,7 +155,7 @@ public class TranslationManager {
     }
 
     public String restoreNumbersInText(String text, List<String> numbers) {
-        Matcher placeholderMatcher = Pattern.compile("\\{(\\d+)}").matcher(text);
+        Matcher placeholderMatcher = PLACEHOLDERS.matcher(text);
         StringBuffer buffer = new StringBuffer();
 
         while (placeholderMatcher.find()) {
