@@ -58,8 +58,8 @@ tasks.register('shadowJar', Jar) {
 	}
 
 	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-	from sourceSets.main.output
 	from sourceSets.test.output
+	from sourceSets.main.output
 	from {
 		configurations.testRuntimeClasspath.collect { file ->
 			file.isDirectory() ? file : zipTree(file)
@@ -75,4 +75,22 @@ tasks.register('shadowJar', Jar) {
 	group = BasePlugin.BUILD_GROUP
 	archiveClassifier.set('shadow')
 	archiveFileName.set("${rootProject.name}-${project.version}-all.jar")
+}
+
+// Load production classes/resources from the artifact, never loose main/test output.
+sourceSets {
+	artifactSmoke {
+		java.srcDir 'tools/artifact-smoke'
+		compileClasspath = files(providers.gradleProperty('pluginArtifact')) + configurations.testRuntimeClasspath
+	}
+}
+tasks.register('smokeTestArtifact', JavaExec) {
+	dependsOn tasks.named('artifactSmokeClasses')
+	def artifact = providers.gradleProperty('pluginArtifact')
+	classpath = sourceSets.artifactSmoke.output + files(artifact) + configurations.testRuntimeClasspath
+	mainClass = 'com.haramisi98.LingoScape.ArtifactSmoke'
+	args layout.projectDirectory.asFile.absolutePath
+	doFirst {
+		if (!file(artifact.get()).isFile()) throw new GradleException('Pass -PpluginArtifact=<built plugin JAR>')
+	}
 }

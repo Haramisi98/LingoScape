@@ -44,7 +44,7 @@ def validate = { records ->
     }
 }
 
-def generated = layout.buildDirectory.dir('generated/translations')
+def generated = layout.buildDirectory.dir('generated/releaseTranslations')
 def registerGeneration = { String taskName, String directory, boolean release ->
 tasks.register(taskName) {
     inputs.dir(layout.projectDirectory.dir('translations'))
@@ -82,8 +82,7 @@ tasks.register('releaseJar', Jar) {
     group = 'build'
     description = 'Package plugin classes and reviewed translations only (not a standalone client).'
     dependsOn tasks.named('classes'), tasks.named('generateReleaseTranslations'), tasks.named('check')
-    from(sourceSets.main.output.classesDirs)
-    from(layout.buildDirectory.dir('generated/releaseTranslations'))
+    from(sourceSets.main.output)
     archiveClassifier = 'release'
 }
 
@@ -128,10 +127,12 @@ tasks.register('generateKnownTextIndex') {
     }
 }
 sourceSets.main.resources.srcDir(knownIndex)
-tasks.named('releaseJar') { from(knownIndex); dependsOn tasks.named('generateKnownTextIndex') }
+// Drafts are available only on the development/test classpath.
+sourceSets.test.resources.srcDir(layout.buildDirectory.dir('generated/translations'))
+tasks.named('processTestResources') { dependsOn tasks.named('generateTranslations') }
 // Retain legacy data for collection/history, but do not ship or read it at runtime.
 tasks.named('processResources') {
-    dependsOn tasks.named('generateTranslations')
+    dependsOn tasks.named('generateReleaseTranslations')
     dependsOn tasks.named('generateKnownTextIndex')
     exclude 'net/runelite/client/plugins/lingoScape/**'
 }
