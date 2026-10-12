@@ -36,8 +36,22 @@ after a build to inspect results.
 This starts RuneLite with `--developer-mode --debug` and Java assertions enabled.
 In the plugin configuration panel, search for **LingoScape** and enable it if needed.
 Open its settings (gear icon) and set **Language** to **Dansk (Danish)** or **English (original)**.
-Danish is the default. RuneLite saves the selection; changes apply to newly created menus
-without restarting. Close and reopen an already visible menu after changing the language.
+Danish is the default. RuneLite saves the selection; changes refresh dialogue and newly
+opened menus after the language finishes loading, without restarting.
+Use **English preview / resume learning** (Tab by default). Press it once to show
+original English and again to return to the selected language. This temporary override
+does not change the saved Language setting and resets when the plugin is disabled.
+Dialogue changes apply on the next client tick. Already-open menus retain their current
+text until closed; reopen them to see the selected language. RuneLite 1.13.1 measures
+menu width when opening, so changing text while open can overflow the menu border.
+A small top-left overlay shows the learning language, or **English preview**, and the
+current hotkey. It is hidden on the login screen and when English is the saved language.
+The **Preview English while learning** settings section explains the shortcut; hover the
+hotkey setting for details. Existing custom or unassigned keybindings are preserved.
+Enable **Hold to preview** to show English only while holding the hotkey; releasing it or
+losing game focus resumes learning. Toggle behavior remains the default. Changing the
+hotkey or preview behavior resets preview. Turn off **Show learning widget** to hide the
+status overlay without disabling the shortcut. Open menus still update when reopened.
 The plugin is disabled by default; an existing RuneLite profile may already have it enabled.
 The development client uses your usual RuneLite configuration. Close another RuneLite instance
 first to avoid confusion about which client contains your changes.
@@ -95,9 +109,12 @@ from runtime dictionaries and does not change text displayed in-game.
   Examine → Undersøg, Take → Tag, Talk-to → Tal med, Walk here → Gå herhen, and Open → Åbn.
   Untranslated entries are omitted from runtime maps and stay English.
   Inventory item names can therefore remain English while their action labels are Danish.
-- Existing dialogue code schedules widget updates on a background executor after 5 ms and
-  does not clean up the executor on shutdown. Client-thread scheduling and lifecycle handling
-  remain follow-up work; startup validation does not establish in-game reliability.
+- Dialogue updates run on the client tick. Original menu and dialogue text is retained while
+  those UI elements are live so the English override can restore markup and line breaks.
+  Shutdown restores only live elements that still contain LingoScape's last text; later
+  edits by the game or another plugin are left untouched. Deferred cleanup is completed
+  before a re-enabled plugin translates again. Unchanged dialogue is not rewritten each tick.
+  Language loading and collection I/O use a background worker that shuts down with the plugin.
 
 ## Scaffolding and validation
 
