@@ -19,6 +19,106 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TranslationPluginTests {
 
+    @Test
+    void holdPreviewEndsOnReleaseFocusLossAndModeChange() {
+        plugin.config = new TranslationConfig() {
+            @Override public boolean holdToPreview() { return true; }
+        };
+        plugin.client = mock(net.runelite.api.Client.class);
+        plugin.keyManager = mock(net.runelite.client.input.KeyManager.class);
+        startPlugin();
+        org.mockito.ArgumentCaptor<net.runelite.client.input.KeyListener> capture =
+                org.mockito.ArgumentCaptor.forClass(net.runelite.client.input.KeyListener.class);
+        verify(plugin.keyManager).registerKeyListener(capture.capture());
+        net.runelite.client.input.KeyListener listener = capture.getValue();
+        java.awt.Canvas canvas = new java.awt.Canvas();
+        java.awt.event.KeyEvent press = spy(new java.awt.event.KeyEvent(canvas,
+                java.awt.event.KeyEvent.KEY_PRESSED, 1, 0, java.awt.event.KeyEvent.VK_TAB, '\t'));
+        java.awt.event.KeyEvent release = spy(new java.awt.event.KeyEvent(canvas,
+                java.awt.event.KeyEvent.KEY_RELEASED, 2, 0, java.awt.event.KeyEvent.VK_TAB, '\t'));
+        // Native events have an extended code; Java-constructed events leave it undefined.
+        when(press.getExtendedKeyCode()).thenReturn(java.awt.event.KeyEvent.VK_TAB);
+        when(release.getExtendedKeyCode()).thenReturn(java.awt.event.KeyEvent.VK_TAB);
+        listener.keyPressed(press);
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        assertEquals(true, plugin.isEnglishOverride());
+        listener.keyReleased(release);
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        assertEquals(false, plugin.isEnglishOverride());
+        listener.keyPressed(press);
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        listener.focusLost();
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        assertEquals(false, plugin.isEnglishOverride());
+        listener.keyPressed(press);
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        plugin.config = new TranslationConfig() {};
+        ConfigChanged changed = mock(ConfigChanged.class);
+        when(changed.getGroup()).thenReturn(TranslationConfig.GROUP);
+        when(changed.getKey()).thenReturn("holdToPreview");
+        plugin.onConfigChanged(changed);
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        assertEquals(false, plugin.isEnglishOverride());
+    }
+
+    @Test
+    void hotkeyRestoresVisibleMenuAndDialogueWithoutChangingLanguage() {
+        plugin.client = mock(net.runelite.api.Client.class);
+        plugin.keyManager = mock(net.runelite.client.input.KeyManager.class);
+        plugin.clientThread = mock(net.runelite.client.callback.ClientThread.class);
+        doAnswer(call -> { ((Runnable) call.getArgument(0)).run(); return null; })
+                .when(plugin.clientThread).invokeLater(any(Runnable.class));
+        startPlugin();
+        org.mockito.ArgumentCaptor<net.runelite.client.input.KeyListener> listener =
+                org.mockito.ArgumentCaptor.forClass(net.runelite.client.input.KeyListener.class);
+        verify(plugin.keyManager).registerKeyListener(listener.capture());
+        net.runelite.client.util.HotkeyListener hotkey = (net.runelite.client.util.HotkeyListener) listener.getValue();
+        java.util.concurrent.atomic.AtomicReference<String> option = new java.util.concurrent.atomic.AtomicReference<>("Use");
+        when(menuEntry.getOption()).thenAnswer(call -> option.get());
+        doAnswer(call -> { option.set(call.getArgument(0)); return menuEntry; }).when(menuEntry).setOption(anyString());
+        when(plugin.client.getMenuEntries()).thenReturn(new MenuEntry[] {menuEntry});
+        when(plugin.client.isMenuOpen()).thenReturn(false);
+        when(menuEntry.getItemId()).thenReturn(1);
+        java.util.concurrent.atomic.AtomicReference<String> target = new java.util.concurrent.atomic.AtomicReference<>("<col=ffff00>Sword</col>");
+        when(menuEntry.getTarget()).thenAnswer(call -> target.get());
+        doAnswer(call -> { target.set(call.getArgument(0)); return menuEntry; }).when(menuEntry).setTarget(anyString());
+        plugin.translationManager.translations.get(TranslationType.ITEM).put("Sword", "Test sword");
+        Widget widget = mock(Widget.class);
+        java.util.concurrent.atomic.AtomicReference<String> dialogue = new java.util.concurrent.atomic.AtomicReference<>("Hello<br>there");
+        when(widget.getText()).thenAnswer(call -> dialogue.get());
+        doAnswer(call -> { dialogue.set(call.getArgument(0)); return widget; }).when(widget).setText(anyString());
+        when(plugin.client.getWidget(net.runelite.api.widgets.ComponentID.DIALOG_NPC_TEXT)).thenReturn(widget);
+        plugin.translationManager.translations.get(TranslationType.DIALOGUE).put("Hello there", "Hej der");
+        TranslationManager selected = plugin.translationManager;
+        plugin.processMenuEntry(menuEntry);
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        assertEquals("Brug", option.get());
+        assertEquals("<col=ffff00>Test sword</col>", target.get());
+        assertEquals("Hej der", dialogue.get());
+        hotkey.hotkeyPressed();
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        assertEquals("Use", option.get());
+        assertEquals("<col=ffff00>Sword</col>", target.get());
+        assertEquals("Hello<br>there", dialogue.get());
+        org.junit.jupiter.api.Assertions.assertSame(selected, plugin.translationManager);
+        assertEquals(TranslationConfig.Language.DANISH, plugin.config.language());
+        hotkey.hotkeyPressed();
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        assertEquals("Brug", option.get());
+        assertEquals("Hej der", dialogue.get());
+        dialogue.set("New<br>line");
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        hotkey.hotkeyPressed();
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        assertEquals("New<br>line", dialogue.get());
+        hotkey.hotkeyPressed();
+        plugin.onClientTick(new net.runelite.api.events.ClientTick());
+        plugin.shutDown();
+        assertEquals("Use", option.get());
+        assertEquals("<col=ffff00>Sword</col>", target.get());
+        verify(plugin.keyManager).unregisterKeyListener(hotkey);
+    }
+
     private TranslationPlugin plugin;
 
     @Mock

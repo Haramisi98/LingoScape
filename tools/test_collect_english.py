@@ -1,9 +1,32 @@
 import unittest
+import json
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
-from collect_english import Collection, collect_dialogue, extract, option_texts
+from collect_english import Collection, collect_dialogue, collect_local, extract, option_texts
 
 
 class CollectionTests(unittest.TestCase):
+    def test_archived_json_preserves_collected_local_text_and_provenance(self):
+        root = Path(__file__).resolve().parents[1]
+        actual = Collection()
+        manifest = collect_local(root, actual)
+        self.assertEqual(len(manifest), 10)
+        expected = Collection()
+        for category in ("dialogue", "item", "menu", "npc", "object"):
+            with (root / "data/english" / (category + ".jsonl")).open(encoding="utf-8") as stream:
+                for line in stream:
+                    row = json.loads(line)
+                    for source in row["sources"]:
+                        if source.startswith("local:"):
+                            expected.add(category, row["text"], source)
+        self.assertEqual(actual.categories, expected.categories)
+
+    def test_missing_archived_inputs_fail_instead_of_silently_losing_text(self):
+        with TemporaryDirectory() as directory:
+            with self.assertRaisesRegex(ValueError, "Missing or unexpected"):
+                collect_local(Path(directory), Collection())
+
     def test_deduplicates_and_keeps_provenance_without_changing_text(self):
         result = Collection()
         for source in ("a", "b", "a"):

@@ -53,6 +53,6 @@ plugin's language selector.
 
 - The [English collection](../data/english/README.md) is research/input for future translation;
   it is not automatically added to these files.
-- Legacy CSV dictionaries remain in the repository as reference/collector input. They are
-  excluded from plugin resources and no longer read by the plugin. Their old translated values
-  are historical copies; future edits belong here only.
+- Legacy dictionaries are archived as [JSON collector inputs](../data/legacy-dictionaries/README.md).
+  The CSV files have been removed. The archive is not packaged or read by the plugin;
+  historical translation values are retained for reference. Future translation edits belong here only.

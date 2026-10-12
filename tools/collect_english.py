@@ -133,27 +133,42 @@ def fetch(url, path, offline, expected_hash=None):
     return raw, digest
 
 
+def collect_local(root, result):
+    """Read the archived JSON inputs, retaining the historical local source IDs."""
+    manifest = {}
+    paths = sorted((root / "data/legacy-dictionaries").glob("*/*.json"))
+    expected = {f"{folder}/{prefix}_{category}.json"
+                for folder, prefix in (("dk", "dk"), ("exampleFiles", "example"))
+                for category in ("dialogue", "item", "menu", "npc", "object")}
+    if {f"{path.parent.name}/{path.name}" for path in paths} != expected:
+        raise ValueError("Missing or unexpected legacy JSON dictionary inputs")
+    for path in paths:
+        raw = path.read_bytes()
+        data = json.loads(raw)
+        if not isinstance(data, dict) or not isinstance(data.get("rows"), list):
+            raise ValueError(f"Invalid archived dictionary: {path}")
+        source = "local:" + path.parent.name + "/" + path.stem
+        category = path.stem.split("_", 1)[1]
+        for row in data["rows"]:
+            if not isinstance(row, list) or len(row) != 2 or not all(isinstance(v, str) for v in row):
+                raise ValueError(f"Invalid archived dictionary row: {path}")
+            result.add(category, row[0], source)
+        manifest[source] = {
+            "path": path.relative_to(root).as_posix(),
+            "sha256": hashlib.sha256(raw).hexdigest(),
+            "original_csv": data["original_csv"],
+            "note": "Archived project dictionary; upstream origin not established. English keys only are collected.",
+        }
+    return manifest
+
+
 def collect(root=ROOT, offline=False):
     out = root / "data/english"
     cache = root / "build/collection-cache"
     manifest_path = out / "sources.json"
     previous = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
     result = Collection()
-    manifest = {}
-    resource_root = root / "src/main/resources/net/runelite/client/plugins/lingoScape"
-    for path in sorted(resource_root.glob("*/*.csv")):
-        relative = path.relative_to(root).as_posix()
-        source = "local:" + path.parent.name + "/" + path.stem
-        raw = path.read_bytes()
-        manifest[source] = {"path": relative, "sha256": hashlib.sha256(raw).hexdigest(),
-                            "note": "Existing project dictionary; upstream origin not established."}
-        category = path.stem.split("_", 1)[1]
-        for number, line in enumerate(raw.decode("utf-8-sig").splitlines(), 1):
-            if not line.strip():
-                continue
-            if "~|~" not in line:
-                raise ValueError(f"Malformed dictionary row: {relative}:{number}")
-            result.add(category, line.split("~|~", 1)[0], source)
+    manifest = collect_local(root, result)
     baseline = result.counts()
     for name, url, project in SOURCES:
         raw, digest = fetch(url, cache / (name + ".json"), offline, previous.get(name, {}).get("sha256"))

@@ -3,7 +3,8 @@
 This is LingoScape's collected English source material for future translation. No new translations
 have been generated. Existing runtime dictionaries and their Danish translations are unchanged.
 This folder is not bundled into the plugin or loaded at runtime. Translation editing now uses
-[structured translation records](../../translations/README.md); legacy CSVs remain collector inputs.
+[structured translation records](../../translations/README.md); the former CSV inputs are now
+[archived JSON dictionaries](../legacy-dictionaries/README.md).
 
 ## Contents
 
@@ -31,8 +32,9 @@ existing uppercase NPC/object names may therefore coexist with mixed-case cache 
 
 ## Sources and attribution
 
-- Existing dictionaries in this repository, including the example dictionaries: English keys only.
-  Their earlier upstream origin has not been established. File hashes record the import inputs.
+- Archived JSON dictionaries, including the example dictionaries: English keys only.
+  Their earlier upstream origin has not been established. File hashes record the JSON inputs;
+  `original_csv` metadata retains the removed CSV paths/checksums as historical provenance.
 - [wvanderp/osrs-db](https://github.com/wvanderp/osrs-db), revision
   `c3d25660cf90b5ad56ae5e705a138f57a7dc7b24`: cache item/NPC/object definitions,
   actions, item examine text, quests, and skills. Its repository license is retained in
