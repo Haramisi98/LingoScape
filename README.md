@@ -48,6 +48,7 @@ Run the same checks locally from the repository root (Python 3.9+ is required):
 .\gradlew.bat clean build shadowJar releaseJar --no-daemon --console=plain
 python -m unittest discover -s tools -p "test_*.py"
 python tools/validate_release.py
+python tools/validate_plugin_hub.py
 ```
 
 On macOS/Linux, replace `.\gradlew.bat` with `bash ./gradlew`. To reproduce the Hub-version
@@ -62,12 +63,29 @@ Unexpected files (including the launcher, test dependencies, source collections,
 archives) fail validation. CI retains Java test reports even on failure and uploads release
 artifacts only after validation succeeds.
 
-**Release dependency:** this validates the existing `releaseJar` task, not the actual Plugin
-Hub packaging path. [Issue #2](https://github.com/Haramisi98/LingoScape/issues/2) must choose
-and verify that path: the current `build=standard` metadata causes Hub to replace custom
-build files, bypassing resource generation. Once that decision is implemented, CI must also
-build and validate that artifact before [issue #5](https://github.com/Haramisi98/LingoScape/issues/5)
-can be fully closed. No packaging mode or translation review status is changed by this CI.
+### Plugin Hub packaging
+
+[Plugin metadata](runelite-plugin.properties) uses `build=gradle`: Hub must retain the
+custom build to generate dictionaries and the known-text index. Production resources,
+the normal JAR, `releaseJar`, and Hub's artifact contain **reviewed translations only**.
+Draft dictionaries belong to the test/development classpath; `run` and `shadowJar` still
+include them for local preview. Never submit the standalone `*-all.jar` as a plugin.
+
+[Hub validation](tools/validate_plugin_hub.py) downloads the official
+[v5 tooling bundle](https://github.com/runelite/plugin-hub-tooling/releases/tag/v5), caches
+its unmodified init script and API recorder under `.gradle/hub-tooling`, and invokes Hub's
+`runelitePluginHubPackage` and `runelitePluginHubManifest` tasks with the current Hub RuneLite
+version. It requires `tar` with Zstandard support (available on current Windows and Ubuntu).
+The wrapper uses Gradle 8.10, matching the v5 bundle. CI runs this in the Hub-version job.
+
+It inspects `build/plugin-hub/plugin.jar` with the same strict content validator and runs
+`smokeTestArtifact` with production classes and resources loaded from that JAR. The smoke
+test loads every dictionary, looks up known text, and persists/reloads a missing-text
+candidate. It excludes loose production resources, draft/test resources, and the development
+launcher from the smoke-test classpath. This verifies Hub's build path, not Hub submission,
+policy approval, signing, or an in-game session.
+
+**Release dependency:** packaging checks do not approve translations.
 Empty reviewed dictionaries are valid for these structural checks; all current translations
 are drafts. A useful public release still requires the human review and nonempty dictionaries
 tracked in [issue #3](https://github.com/Haramisi98/LingoScape/issues/3).

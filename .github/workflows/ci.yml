@@ -43,6 +43,9 @@ jobs:
         run: bash ./gradlew clean build shadowJar releaseJar --no-daemon --console=plain
       - name: Validate release JAR contents
         run: python tools/validate_release.py
+      - name: Build and smoke-test the actual Plugin Hub artifact
+        if: matrix.runelite == 'plugin-hub'
+        run: python tools/validate_plugin_hub.py
       - name: Upload test reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -56,7 +59,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: release-${{ matrix.runelite }}
-          path: build/libs/*-release.jar
+          path: |
+            build/libs/*-release.jar
+            build/plugin-hub/plugin.jar
           if-no-files-found: error
 
   collector:
