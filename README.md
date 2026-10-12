@@ -27,6 +27,51 @@ javac -version
 launcher and runtime dependencies. Open the [test report](build/reports/tests/test/index.html)
 after a build to inspect results.
 
+### Continuous integration
+
+[GitHub Actions](.github/workflows/ci.yml) runs on every push and pull request, and can
+also be started manually. It uses Temurin JDK 11 and runs the Python collector and artifact
+validator tests on Python 3.9 (the collector's minimum) and 3.14. These tests use only
+checked-in inputs and temporary fixtures; they do not download the external English-source
+cache or require game login. Gradle still needs access to its normal dependency repositories.
+
+The build jobs run Java tests, translation validation, and development/release packaging
+against both the repository's pinned RuneLite version and the version read from the
+[Plugin Hub target](https://github.com/runelite/plugin-hub/blob/master/runelite.version).
+The latter is recorded in the Actions summary and fails if it cannot be resolved. At the
+time this CI was added, both versions were 1.13.1. This is API/build compatibility coverage;
+in-game release verification remains tracked in [issue #6](https://github.com/Haramisi98/LingoScape/issues/6).
+
+Run the same checks locally from the repository root (Python 3.9+ is required):
+
+```powershell
+.\gradlew.bat clean build shadowJar releaseJar --no-daemon --console=plain
+python -m unittest discover -s tools -p "test_*.py"
+python tools/validate_release.py
+```
+
+On macOS/Linux, replace `.\gradlew.bat` with `bash ./gradlew`. To reproduce the Hub-version
+job, read the version from the link above and add `-PruneLiteVersion=<version>` to the
+Gradle command. Rerun the artifact validator after that build.
+
+[The artifact validator](tools/validate_release.py) inspects the actual `*-release.jar`
+in `build/libs`, requiring all compiled production classes, all five dictionaries per
+language with exactly the reviewed source entries, and the generated known-text index.
+It checks that the index is nonempty, sorted, unique, and composed of 16-byte records.
+Unexpected files (including the launcher, test dependencies, source collections, and legacy
+archives) fail validation. CI retains Java test reports even on failure and uploads release
+artifacts only after validation succeeds.
+
+**Release dependency:** this validates the existing `releaseJar` task, not the actual Plugin
+Hub packaging path. [Issue #2](https://github.com/Haramisi98/LingoScape/issues/2) must choose
+and verify that path: the current `build=standard` metadata causes Hub to replace custom
+build files, bypassing resource generation. Once that decision is implemented, CI must also
+build and validate that artifact before [issue #5](https://github.com/Haramisi98/LingoScape/issues/5)
+can be fully closed. No packaging mode or translation review status is changed by this CI.
+Empty reviewed dictionaries are valid for these structural checks; all current translations
+are drafts. A useful public release still requires the human review and nonempty dictionaries
+tracked in [issue #3](https://github.com/Haramisi98/LingoScape/issues/3).
+
 ## Launch locally
 
 ```powershell
